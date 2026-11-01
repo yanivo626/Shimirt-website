@@ -54,14 +54,17 @@
    and the synergy method itself – the bagua map and the five elements – as the page's images.
    Single light theme by choice: the studio's world is white. */
 :root {
+  /* Brand palette – Shimrit Ochayon Brand Page: #000000, #FFFFFF, #BCBCBC, #C4A571.
+     Everything else is a tint of those four. */
   --white: #FFFFFF;
-  --mist: #F6F5F2;
-  --ink: #141414;
-  --ink-soft: #6A6A66;
-  --line: #E4E1DB;
-  --gold: #B38D52;      /* text-safe version of the logo's gold square */
-  --gold-sq: #C5A671;   /* the logo's gold square */
-  --grey-sq: #BCBCBC;   /* the logo's grey square */
+  --ink: #000000;
+  --grey: #BCBCBC;
+  --gold: #C4A571;
+  --ink-soft: rgba(0,0,0,.62);   /* brand black, tinted for secondary text */
+  --mist: #F5F5F5;               /* brand grey at ~15% on white */
+  --line: rgba(188,188,188,.55); /* brand grey hairline */
+  --gold-sq: var(--gold);
+  --grey-sq: var(--grey);
   --font-display: "Karantina", "Arial Narrow", "Assistant", sans-serif;
   --font-body: "Assistant", "Arial Hebrew", Arial, sans-serif;
   --gutter: clamp(16px, 5vw, 80px);
@@ -127,11 +130,11 @@ nav a:hover { background-size: 100% 1px; }
 .map .part { fill: none; stroke: var(--ink); stroke-width: 2; }
 .map .grid { fill: none; stroke: var(--gold); stroke-width: 1; stroke-dasharray: 4 5; }
 .map .cell { fill: var(--gold-sq); opacity: 0; transition: opacity .3s; }
-.map .cell.on { opacity: .18; }
+.map .cell.on { opacity: .28; }
 .map text { font-family: var(--font-body); font-size: 12px; fill: var(--ink-soft); pointer-events: none; }
-.map text.k { fill: var(--gold); font-weight: 600; }
+.map text.k { fill: var(--ink); font-weight: 600; }
 .map figcaption { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13px; color: var(--ink-soft); border-top: 1px solid var(--line); margin-top: 14px; padding-top: 10px; }
-.map figcaption b { color: var(--gold); font-weight: 600; }
+.map figcaption b { color: var(--ink); font-weight: 600; }
 
 .facts { display: flex; flex-wrap: wrap; border-top: 1px solid var(--ink); margin-top: clamp(48px, 6vw, 80px); }
 .fact { flex: 1 1 200px; padding: 22px 0 0; display: flex; align-items: baseline; gap: 14px; }
@@ -213,7 +216,8 @@ section { padding: clamp(72px, 10vw, 140px) 0; }
 /* journal */
 .journal { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 3vw, 44px); }
 .post { text-decoration: none; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--ink); padding-top: 20px; }
-.post .cat { font-size: 13px; font-weight: 600; color: var(--gold); }
+.post .cat { font-size: 13px; font-weight: 600; color: var(--ink); display: inline-flex; align-items: center; gap: 8px; }
+.post .cat::before { content: ""; width: 8px; height: 8px; background: var(--gold); }
 .post h3 { font-size: 40px; }
 .post p { color: var(--ink-soft); font-size: 16px; }
 
@@ -222,7 +226,14 @@ section { padding: clamp(72px, 10vw, 140px) 0; }
 .more-guides a:hover { border-color: var(--gold); }
 
 /* contact */
-.contact { border-top: 1px solid var(--line); }
+.contact { background: var(--ink); color: var(--white); }
+.contact .sq, .contact .sub, .contact .channels span, .contact .field label, .contact .check { color: rgba(255,255,255,.7); }
+.contact .field input, .contact .field select { color: var(--white); border-bottom-color: rgba(255,255,255,.45); }
+.contact .field select option { color: var(--ink); }
+.contact .check input { accent-color: var(--gold); }
+.contact .btn { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.contact .btn:hover { background: transparent; color: var(--white); }
+.contact .more { color: var(--white); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 120px); }
 .contact h2 { font-size: clamp(72px, 9vw, 140px); margin-top: 18px; }
 .contact .sub { margin-top: 24px; color: var(--ink-soft); max-width: 30em; }
@@ -236,7 +247,7 @@ form { display: grid; gap: 22px; }
 .check { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; color: var(--ink-soft); }
 .check input { margin-top: 6px; accent-color: var(--ink); }
 form .btn { justify-self: start; }
-.note { font-size: 15px; color: var(--gold); min-height: 1.4em; }
+.note { font-size: 15px; color: var(--gold); min-height: 1.4em; } /* on black: 9:1 */
 
 footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 14px; color: var(--ink-soft); }
 .foot { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: center; }
