@@ -17,7 +17,7 @@
   --ink: #1D201B;        /* text – olive-black */
   --ink-soft: #5D625A;   /* secondary text */
   --line: #C9C5BC;       /* hairlines */
-  --brass: #9C7642;      /* the one accent */
+  --brass: #A8864F;      /* the one accent – the logo's gold square, deepened for text */
   --sage: #6E7868;
   --night: #1B1E1A;      /* dark contact band */
   --night-text: #E9E6DF;
@@ -71,9 +71,7 @@ header {
   backdrop-filter: blur(10px);
 }
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 76px; }
-.mark { text-decoration: none; display: flex; flex-direction: column; line-height: 1; gap: 6px; }
-.mark b { font-family: var(--font-display); font-weight: 400; font-size: 26px; letter-spacing: .02em; }
-.mark span { font-size: 11px; letter-spacing: .32em; color: var(--ink-soft); }
+.mark { text-decoration: none; display: block; }
 nav ul { list-style: none; display: flex; gap: 32px; margin: 0; padding: 0; font-size: 15px; font-weight: 400; }
 nav a { text-decoration: none; padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color .3s; }
 nav a:hover { border-color: var(--brass); }
@@ -88,6 +86,31 @@ nav a:hover { border-color: var(--brass); }
 .btn.ghost:hover { background: var(--ink); color: var(--stone); }
 .btn .arr { transition: transform .3s; }
 .btn:hover .arr { transform: translateX(-4px); }
+
+/* ---------- logo ---------- */
+.logo { display: block; height: 100%; width: auto; }
+.logo.on-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .logo.on-light { display: none; }
+  :root:not([data-theme="light"]) .logo.on-dark { display: block; }
+}
+:root[data-theme="dark"] .logo.on-light { display: none; }
+:root[data-theme="dark"] .logo.on-dark { display: block; }
+.mark { height: 48px; }
+
+/* ---------- opening screen: the logo writes itself in, then the curtain lifts ---------- */
+.intro {
+  position: fixed; inset: 0; z-index: 50; background: var(--stone);
+  display: grid; place-items: center; cursor: pointer;
+  animation: lift .9s cubic-bezier(.7,0,.2,1) 2.6s forwards;
+}
+.intro .ink { height: clamp(120px, 26vw, 260px); width: auto; max-width: 84vw; }
+.intro .ink-box { animation: write 1.6s cubic-bezier(.45,.05,.25,1) .25s both; }
+.intro .rule { width: min(360px, 60vw); height: 1px; background: var(--brass); margin: 28px auto 0; transform-origin: right; animation: rule 1s ease 1.4s both; }
+@keyframes write { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+@keyframes rule { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes lift { to { transform: translateY(-100%); visibility: hidden; } }
+.intro.done { display: none; }
 
 /* ---------- hero ---------- */
 .hero { padding: clamp(48px, 8vw, 104px) 0 clamp(40px, 6vw, 72px); }
@@ -258,17 +281,28 @@ footer { padding: 40px 0; border-top: 1px solid var(--line); font-size: 14px; co
   .steps li { grid-template-columns: 48px 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .intro { display: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 </style>
 </head>
 <body>
 
+<div class="intro" id="intro" role="presentation" title="לחצו כדי לדלג">
+  <div>
+    <div class="ink-box">
+      <img class="ink logo on-light" src="assets/logo-dark.png" alt="שמרית אוחיון – תכנון ועיצוב פנים" width="1199" height="613">
+      <img class="ink logo on-dark" src="assets/logo-white.png" alt="" width="1199" height="613">
+    </div>
+    <div class="rule"></div>
+  </div>
+</div>
+
 <header>
   <div class="wrap bar">
-    <a class="mark" href="#top" aria-label="שמרית אוחיון – לדף הבית">
-      <b>שמרית אוחיון</b>
-      <span>עיצוב ותכנון פנים</span>
+    <a class="mark" href="#top" aria-label="שמרית אוחיון – תכנון ועיצוב פנים, לדף הבית">
+      <img class="logo on-light" src="assets/logo-dark.png" alt="" width="1199" height="613">
+      <img class="logo on-dark" src="assets/logo-white.png" alt="" width="1199" height="613">
     </a>
     <nav aria-label="ניווט ראשי">
       <ul>
@@ -515,7 +549,10 @@ footer { padding: 40px 0; border-top: 1px solid var(--line); font-size: 14px; co
 
 <footer>
   <div class="wrap foot">
-    <span>© שמרית אוחיון · עיצוב ותכנון פנים · מודיעין</span>
+    <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+      <span style="height:56px;display:block"><img class="logo on-light" src="assets/logo-dark.png" alt="שמרית אוחיון" width="1199" height="613"><img class="logo on-dark" src="assets/logo-white.png" alt="" width="1199" height="613"></span>
+      <span>© שמרית אוחיון · תכנון ועיצוב פנים · מודיעין</span>
+    </div>
     <ul>
       <li><a href="https://www.shimrit-design.co.il/שאלות-ותשובות">שאלות ותשובות</a></li>
       <li><a href="https://www.shimrit-design.co.il/מהתקשורת">מהתקשורת</a></li>
@@ -525,6 +562,16 @@ footer { padding: 40px 0; border-top: 1px solid var(--line); font-size: 14px; co
 </footer>
 
 <script>
+(function () {
+  var intro = document.getElementById("intro");
+  var seen = false;
+  try { seen = sessionStorage.getItem("introSeen") === "1"; sessionStorage.setItem("introSeen", "1"); } catch (e) {}
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function done() { intro.classList.add("done"); }
+  if (seen || reduce) { done(); return; }
+  intro.addEventListener("click", done);
+  intro.addEventListener("animationend", function (e) { if (e.animationName === "lift") done(); });
+})();
 document.getElementById("lead").addEventListener("submit", function (e) {
   e.preventDefault();
   var name = document.getElementById("f-name").value.trim();
