@@ -3,8 +3,48 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>שמרית אוחיון – עיצוב פנים</title>
-<meta name="description" content="שמרית אוחיון, מעצבת פנים במודיעין ובמרכז ומאסטר באדריכלות סינרגית. עיצוב סינרגי: תכנון, אסתטיקה ופנג שואי לבית שמרגיש נכון, לא רק נראה נכון.">
+<title>מעצבת פנים במודיעין | שמרית אוחיון – עיצוב פנים סינרגי</title>
+<meta name="description" content="שמרית אוחיון, מעצבת פנים במודיעין ובמרכז. עיצוב דירות קבלן, בתים פרטיים ופנטהאוזים בגישה סינרגית: תכנון, אסתטיקה ופנג שואי. 15 שנות ניסיון ו-200+ פרויקטים.">
+<link rel="canonical" href="https://www.shimrit-design.co.il/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="שמרית אוחיון – תכנון ועיצוב פנים">
+<meta property="og:title" content="מעצבת פנים במודיעין | שמרית אוחיון">
+<meta property="og:description" content="עיצוב פנים סינרגי לבתים פרטיים, דירות קבלן ופנטהאוזים במודיעין ובמרכז.">
+<meta property="og:url" content="https://www.shimrit-design.co.il/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.shimrit-design.co.il/#business",
+      "name": "שמרית אוחיון – תכנון ועיצוב פנים",
+      "description": "סטודיו לעיצוב פנים סינרגי במודיעין: בתים פרטיים, דירות קבלן, פנטהאוזים, משרדים וחללי מסחר.",
+      "url": "https://www.shimrit-design.co.il/",
+      "address": { "@type": "PostalAddress", "addressLocality": "מודיעין", "addressCountry": "IL" },
+      "areaServed": ["מודיעין", "תל אביב", "ראשון לציון", "פתח תקווה", "רחובות", "יהוד", "מבשרת ציון", "אזור המרכז"],
+      "founder": { "@id": "https://www.shimrit-design.co.il/#shimrit" },
+      "knowsAbout": ["עיצוב פנים", "עיצוב סינרגי", "פנג שואי", "עיצוב דירת קבלן", "שינויי דיירים", "הום סטיילינג"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.shimrit-design.co.il/#shimrit",
+      "name": "שמרית אוחיון",
+      "jobTitle": "מעצבת פנים",
+      "url": "https://www.shimrit-design.co.il/שמרית-אוחיון"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.shimrit-design.co.il/#website",
+      "url": "https://www.shimrit-design.co.il/",
+      "name": "שמרית אוחיון – תכנון ועיצוב פנים",
+      "inLanguage": "he-IL",
+      "publisher": { "@id": "https://www.shimrit-design.co.il/#business" }
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
@@ -39,6 +79,7 @@ p { margin: 0; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
 
 /* the logo's square pair, used as a section marker */
+h2.sq { font-family: var(--font-body); line-height: 1.4; }
 .sq { display: inline-flex; align-items: flex-end; font-size: 14px; font-weight: 600; letter-spacing: .04em; color: var(--ink-soft); }
 .sq::before { content: ""; width: 14px; height: 14px; background: var(--gold-sq); box-shadow: -9px 9px 0 -3px var(--grey-sq); margin-inline-end: 18px; margin-bottom: 4px; }
 
@@ -75,8 +116,10 @@ nav a:hover { background-size: 100% 1px; }
 .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(32px, 6vw, 96px); align-items: end; }
 .hero h1 { font-size: clamp(80px, 11vw, 170px); margin-top: 26px; }
 .hero h1 .thin { font-weight: 300; color: var(--ink-soft); display: block; }
+.hero h1 .kw { display: block; font-family: var(--font-body); font-size: 15px; font-weight: 600; letter-spacing: .04em; color: var(--ink-soft); line-height: 1.4; margin-bottom: 18px; }
 .hero .lede { margin-top: 34px; font-size: clamp(18px, 1.6vw, 21px); max-width: 33em; }
 .hero .lede strong { font-weight: 600; }
+.hero .lede a, .syn-text a:not(.more), .local a { text-decoration: none; border-bottom: 1px solid var(--gold-sq); }
 .hero .ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
 
 .map svg { display: block; width: 100%; height: auto; }
@@ -152,6 +195,13 @@ section { padding: clamp(72px, 10vw, 140px) 0; }
 .proj h3 { font-size: 40px; }
 .proj .where { color: var(--ink-soft); font-size: 15px; margin-top: -6px; }
 
+.local { margin-top: clamp(48px, 6vw, 72px); border-top: 1px solid var(--ink); padding-top: 22px; }
+.local h3 { font-size: 40px; }
+.local ul { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; font-size: 16px; }
+.local li { display: grid; grid-template-columns: 170px 1fr; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.local b { font-weight: 600; }
+@media (max-width: 640px) { .local li { grid-template-columns: 1fr; gap: 4px; } }
+
 /* services */
 .services { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: clamp(32px, 6vw, 96px); }
 .services li { break-inside: avoid; }
@@ -166,6 +216,10 @@ section { padding: clamp(72px, 10vw, 140px) 0; }
 .post .cat { font-size: 13px; font-weight: 600; color: var(--gold); }
 .post h3 { font-size: 40px; }
 .post p { color: var(--ink-soft); font-size: 16px; }
+
+.more-guides { list-style: none; margin: 32px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.more-guides a { display: inline-block; text-decoration: none; font-size: 15px; padding: 8px 16px; border: 1px solid var(--line); background: var(--white); transition: border-color .3s; }
+.more-guides a:hover { border-color: var(--gold); }
 
 /* contact */
 .contact { border-top: 1px solid var(--line); }
@@ -246,9 +300,9 @@ footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 14px; co
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <p class="sq">עיצוב פנים סינרגי · מודיעין והמרכז</p>
-          <h1>בית שמרגיש נכון<span class="thin">לא רק נראה נכון</span></h1>
-          <p class="lede">אני שמרית אוחיון, מעצבת פנים <strong>ומאסטר באדריכלות סינרגית</strong>. אני משלבת תכנון פונקציונלי, אסתטיקה ועקרונות פנג שואי, כדי ליצור בית שתומך בכם ובמשפחה שלכם בכל יום.</p>
+          <p class="sq">עיצוב פנים סינרגי</p>
+          <h1><span class="kw">שמרית אוחיון · מעצבת פנים במודיעין ובמרכז</span>בית שמרגיש נכון<span class="thin">לא רק נראה נכון</span></h1>
+          <p class="lede">אני <a href="https://www.shimrit-design.co.il/שמרית-אוחיון">שמרית אוחיון</a>, מעצבת פנים <strong>ומאסטר באדריכלות סינרגית</strong>. אני מתכננת <a href="https://www.shimrit-design.co.il/עיצוב-בתים-פרטיים">בתים פרטיים</a>, <a href="https://www.shimrit-design.co.il/עיצוב-פנים-דירת-קבלן">דירות קבלן</a> ופנטהאוזים במודיעין ובמרכז, ומשלבת תכנון פונקציונלי, אסתטיקה ועקרונות פנג שואי כדי ליצור בית שתומך בכם בכל יום.</p>
           <div class="ctas">
             <a class="btn" href="#contact">לתיאום פגישת היכרות</a>
             <a class="btn line" href="#synergy">מה זה עיצוב סינרגי</a>
@@ -298,11 +352,12 @@ footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 14px; co
   <section id="synergy" class="tint">
     <div class="wrap syn-grid">
       <div class="syn-text">
-        <p class="sq">עיצוב סינרגי</p>
+        <h2 class="sq">עיצוב סינרגי: הגישה ההוליסטית לעיצוב פנים</h2>
         <p class="big-quote">הבית הוא <em>מערכת חיה</em>, לא אוסף של קירות, ריהוט וטרנדים</p>
         <p class="body">עיצוב פנים רגיל שואל איך החלל ייראה. עיצוב סינרגי שואל איך החלל ישפיע על מי שחי בו: מבחינה פונקציונלית, אסתטית ואנרגטית, בו־זמנית.</p>
         <p class="body">מעבר לפרוגרמה הרגילה של צרכים ומספר חדרים, אני מפיקה לכל אחד מבני הבית מפה אישית שמראה את התפלגות חמשת היסודות. כך אני יודעת אילו יסודות צריך לחזק ואילו למתן, ומתרגמת את זה לחומרים, לצבעים ולצורות.</p>
-        <p class="body"><a class="more" href="https://www.shimrit-design.co.il/עיצוב-סינרגי">לקריאה על עיצוב סינרגי</a></p>
+        <p class="body">רוצים להעמיק? קראו <a href="https://www.shimrit-design.co.il/איך-עיצוב-סינרגי-משפיע-על-האווירה-בבית">איך עיצוב סינרגי משפיע על האווירה בבית</a>, על <a href="https://www.shimrit-design.co.il/פנג-שואי-חדר-שינה">פנג שואי בחדר השינה</a> ועל <a href="https://www.shimrit-design.co.il/חומרים-טבעיים-לעיצוב-פנים">חומרים טבעיים בעיצוב פנים</a>.</p>
+        <p class="body"><a class="more" href="https://www.shimrit-design.co.il/עיצוב-סינרגי">כל מה שצריך לדעת על עיצוב סינרגי</a></p>
       </div>
 
       <div class="elements">
@@ -334,7 +389,7 @@ footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 14px; co
   <section id="method">
     <div class="wrap">
       <div class="head">
-        <div><p class="sq">התהליך</p><h2>מהמפה האישית ועד המפתח</h2></div>
+        <div><p class="sq">התהליך</p><h2>תהליך עיצוב הפנים: מהמפה האישית ועד המפתח</h2></div>
         <p>כל שלבי עיצוב הפנים, ובנוסף שכבה סינרגית שמדייקת כל החלטה לאנשים שגרים בבית.</p>
       </div>
       <ol class="steps">
@@ -351,7 +406,7 @@ footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 14px; co
   <section id="projects" class="tint">
     <div class="wrap">
       <div class="head">
-        <div><p class="sq">פרויקטים נבחרים</p><h2>בתים שתוכננו סביב האנשים</h2></div>
+        <div><p class="sq">פרויקטים נבחרים</p><h2>פרויקטים בעיצוב פנים במודיעין ובמרכז</h2></div>
         <a class="more" href="https://www.shimrit-design.co.il/">לכל הפרויקטים</a>
       </div>
       <div class="projects">
@@ -361,6 +416,17 @@ footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 14px; co
         <a class="proj" href="https://www.shimrit-design.co.il/מהפך-לדירת-קבלן-ביהוד"><div class="frame"><span>תמונה מהפרויקט</span></div><h3>מהפך לדירת קבלן</h3><p class="where">יהוד</p></a>
         <a class="proj" href="https://www.shimrit-design.co.il/בית-פרטי-בראשון-לציון"><div class="frame"><span>תמונה מהפרויקט</span></div><h3>בית פרטי</h3><p class="where">ראשון לציון</p></a>
       </div>
+      <div class="local">
+        <h3>עיצוב פנים לפי אזור</h3>
+        <ul>
+          <li><b>מודיעין</b><span><a href="https://www.shimrit-design.co.il/עיצוב-פנים-במודיעין">מעצבת פנים במודיעין</a> · <a href="https://www.shimrit-design.co.il/פנטהאוז-יוקרתי-במודיעין">פנטהאוז יוקרתי</a> · <a href="https://www.shimrit-design.co.il/עיצוב-פנטהואז-מודרני-קלאסי-במודיעין">פנטהאוז מודרני קלאסי</a> · <a href="https://www.shimrit-design.co.il/דירה-מודרנית-חמה--מודיעין">דירה מודרנית חמה</a> · <a href="https://www.shimrit-design.co.il/עיצוב-דירה-אורבנית--מודיעין">דירה אורבנית</a> · <a href="https://www.shimrit-design.co.il/שיפוץ-בית-פרטי-מודרני-אקלקטי-במודיעין">בית פרטי אקלקטי</a> · <a href="https://www.shimrit-design.co.il/עיצוב-בר-קפה-במודיעין">בר קפה</a></span></li>
+          <li><b>תל אביב</b><span><a href="https://www.shimrit-design.co.il/דירת-גג-מטריפה--שכונת-בבלי-תל-אביב">דירת גג בבבלי</a> · <a href="https://www.shimrit-design.co.il/שינויי-דיירים-דירת-קבלן-תל-אביב">שינויי דיירים בדירת קבלן</a> · <a href="https://www.shimrit-design.co.il/עיצוב-סינרגי-תל-אביב">עיצוב סינרגי בתל אביב</a></span></li>
+          <li><b>ראשון לציון</b><span><a href="https://www.shimrit-design.co.il/בית-פרטי-בראשון-לציון">בית פרטי</a> · <a href="https://www.shimrit-design.co.il/עיצוב-פנים-יוקרתי-לדירה-בראשון-לציון">דירת יוקרה</a></span></li>
+          <li><b>פתח תקווה</b><span><a href="https://www.shimrit-design.co.il/דופלקס---פתח-תקווה">דופלקס</a> · <a href="https://www.shimrit-design.co.il/השבחת-נכסים--עיצוב-דירה-למכירה--פתח-תקווה">השבחת דירה למכירה</a></span></li>
+          <li><b>רחובות, יהוד ומבשרת ציון</b><span><a href="https://www.shimrit-design.co.il/עיצוב-דירת-קבלן-ברחובות-בסגנון-קלאסי-מודרני">דירת קבלן ברחובות</a> · <a href="https://www.shimrit-design.co.il/מהפך-לדירת-קבלן-ביהוד">מהפך לדירת קבלן ביהוד</a> · <a href="https://www.shimrit-design.co.il/שיפוץ-ועיצוב-טריפלקס-במבשרת-ציון">טריפלקס במבשרת</a></span></li>
+          <li><b>כל המרכז</b><span><a href="https://www.shimrit-design.co.il/מעצבת-פנים-במרכז">מעצבת פנים במרכז</a> · <a href="https://www.shimrit-design.co.il/עיצוב-ותכנון-פנים-לבית-פרטי-במרכז">בית פרטי במרכז</a></span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -368,14 +434,17 @@ footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 14px; co
   <section id="services">
     <div class="wrap">
       <div class="head">
-        <div><p class="sq">שירותים</p><h2>ליווי מלא או ייעוץ ממוקד</h2></div>
+        <div><p class="sq">שירותים</p><h2>שירותי עיצוב פנים: ליווי מלא או ייעוץ ממוקד</h2></div>
       </div>
       <ul class="services">
         <li><a href="https://www.shimrit-design.co.il/עיצוב-סינרגי"><h3>עיצוב סינרגי</h3><p>מפה אישית ומפת בית, ותכנון שמאזן את היסודות לכל בני הבית.</p></a></li>
-        <li><a href="https://www.shimrit-design.co.il/עיצוב-פנים-בית-פרטי"><h3>בתים פרטיים</h3><p>תכנון מלא מהעמדת החללים ועד בחירת כל חומר.</p></a></li>
-        <li><a href="https://www.shimrit-design.co.il/עיצוב-פנים-דירת-קבלן"><h3>דירות קבלן ושינויי דיירים</h3><p>מתכננים את השינויים לפני שהקבלן בונה.</p></a></li>
+        <li><a href="https://www.shimrit-design.co.il/עיצוב-פנים-בית-פרטי"><h3>עיצוב פנים לבית פרטי</h3><p>תכנון מלא מהעמדת החללים ועד בחירת כל חומר.</p></a></li>
+        <li><a href="https://www.shimrit-design.co.il/עיצוב-פנים-דירת-קבלן"><h3>עיצוב דירת קבלן ושינויי דיירים</h3><p>מתכננים את השינויים לפני שהקבלן בונה, והופכים דירה סטנדרטית לבית מותאם.</p></a></li>
+        <li><a href="https://www.shimrit-design.co.il/עיצוב-סלון-מודרני-יוקרתי"><h3>עיצוב סלון מודרני</h3><p>סלון יוקרתי ומודרני שמחבר בין נוחות, אור וחומרים.</p></a></li>
+        <li><a href="https://www.shimrit-design.co.il/תכנון-ושדרוג-מטבחים"><h3>תכנון מטבחים וחדרי רחצה</h3><p>החללים הטכניים של הבית, מתוכננים עד הסנטימטר.</p></a></li>
+        <li><a href="https://www.shimrit-design.co.il/הום-סטיילינג"><h3>הום סטיילינג</h3><p>הלבשת הבית בטקסטיל, אקססוריז ותאורה, בלי שיפוץ.</p></a></li>
         <li><a href="https://www.shimrit-design.co.il/פנג-שואי-חדר-שינה"><h3>פנג שואי לחדר השינה</h3><p>מיקום המיטה, כיוון הראש והחומרים, לשינה טובה יותר.</p></a></li>
-        <li><a href="https://www.shimrit-design.co.il/עיצוב-משרדים-וחללי-מסחר"><h3>משרדים וחללי מסחר</h3><p>חללי עבודה שתומכים בצוות, בלקוחות ובעסק.</p></a></li>
+        <li><a href="https://www.shimrit-design.co.il/עיצוב-משרדים-וחללי-מסחר"><h3>עיצוב משרדים וחללי מסחר</h3><p>חללי עבודה שתומכים בצוות, בלקוחות ובעסק.</p></a></li>
         <li><a href="https://www.shimrit-design.co.il/פגישת-יעוץ-בזום"><h3>ייעוץ ממוקד ובזום</h3><p>פגישה אחת להחלטה ספציפית, גם מרחוק.</p></a></li>
       </ul>
     </div>
@@ -385,14 +454,22 @@ footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 14px; co
   <section id="journal" class="tint">
     <div class="wrap">
       <div class="head">
-        <div><p class="sq">מאמרים</p><h2>לקרוא לפני שמתחילים</h2></div>
+        <div><p class="sq">מאמרים</p><h2>מדריכים לפני שמתחילים לעצב</h2></div>
         <a class="more" href="https://www.shimrit-design.co.il/מאמרים">לכל המאמרים</a>
       </div>
       <div class="journal">
+        <a class="post" href="https://www.shimrit-design.co.il/interior-design-pricing-guide"><span class="cat">מחירים</span><h3>כמה עולה מעצבת פנים?</h3><p>המדריך למחירי עיצוב פנים: ממה מורכב המחיר ואיך בוחרים חבילה.</p></a>
+        <a class="post" href="https://www.shimrit-design.co.il/contractor-apartment-design-guide"><span class="cat">דירות קבלן</span><h3>המדריך לעיצוב דירת קבלן</h3><p>מה לבדוק ולתכנן לפני שמגישים לקבלן את השינויים.</p></a>
         <a class="post" href="https://www.shimrit-design.co.il/איך-עיצוב-סינרגי-משפיע-על-האווירה-בבית"><span class="cat">עיצוב סינרגי</span><h3>איך עיצוב סינרגי משפיע על האווירה בבית</h3><p>למה חלל אחד מרגיע, וחלל אחר, יפה ככל שיהיה, לא.</p></a>
-        <a class="post" href="https://www.shimrit-design.co.il/האתגרים-הגדולים-בעיצוב-דירות-קבלן"><span class="cat">דירות קבלן</span><h3>האתגרים הגדולים בעיצוב דירות קבלן</h3><p>מה לבדוק ולתכנן לפני שמגישים לקבלן את השינויים.</p></a>
-        <a class="post" href="https://www.shimrit-design.co.il/תכנון-תאורה-לבית-המדריך-המלא"><span class="cat">תאורה</span><h3>תכנון תאורה לבית: המדריך המלא</h3><p>שכבות אור, גוונים ומיקום נקודות, חדר אחר חדר.</p></a>
       </div>
+      <ul class="more-guides">
+        <li><a href="https://www.shimrit-design.co.il/תכנון-תאורה-לבית-המדריך-המלא">תכנון תאורה לבית</a></li>
+        <li><a href="https://www.shimrit-design.co.il/המדריך-המלא-למטבח-מושלם">המדריך למטבח מושלם</a></li>
+        <li><a href="https://www.shimrit-design.co.il/renovation-interior-design-budget-planning">תכנון תקציב לשיפוץ</a></li>
+        <li><a href="https://www.shimrit-design.co.il/סגנונות-עיצוב-פנים">סגנונות עיצוב פנים</a></li>
+        <li><a href="https://www.shimrit-design.co.il/המדריך-המלא-למקסום-שטחי-הדירה">מקסום שטחי הדירה</a></li>
+        <li><a href="https://www.shimrit-design.co.il/העלאת-ערך-הדירה-בעזרת-עיצוב-פנים">העלאת ערך הדירה</a></li>
+      </ul>
     </div>
   </section>
 
@@ -402,6 +479,7 @@ footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 14px; co
       <div>
         <p class="sq">צרו קשר</p>
         <h2>נתחיל מהמפה שלכם</h2>
+        <p class="sub" style="margin-top:14px"><a class="more" href="https://www.shimrit-design.co.il/פגישת-יעוץ-בזום">או קבעו פגישת ייעוץ בזום</a></p>
         <p class="sub">ספרו לי בקצרה על הבית ועל הפרויקט, ואחזור אליכם לתיאום פגישת היכרות.</p>
         <div class="channels">
           <div><span>סטודיו · </span>מודיעין</div>
@@ -434,7 +512,12 @@ footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 14px; co
   <div class="wrap foot">
     <span>© שמרית אוחיון · תכנון ועיצוב פנים · מודיעין</span>
     <ul>
+      <li><a href="https://www.shimrit-design.co.il/שמרית-אוחיון">אודות</a></li>
+      <li><a href="https://www.shimrit-design.co.il/השירותים-שלנו">שירותים</a></li>
+      <li><a href="https://www.shimrit-design.co.il/לקוחות-ממליצים">לקוחות ממליצים</a></li>
+      <li><a href="https://www.shimrit-design.co.il/מאמרים">מאמרים</a></li>
       <li><a href="https://www.shimrit-design.co.il/שאלות-ותשובות">שאלות ותשובות</a></li>
+      <li><a href="https://www.shimrit-design.co.il/צרו-קשר">צרו קשר</a></li>
       <li><a href="https://www.shimrit-design.co.il/מהתקשורת">מהתקשורת</a></li>
       <li><a href="https://www.shimrit-design.co.il/הצהרת-נגישות">הצהרת נגישות</a></li>
     </ul>
