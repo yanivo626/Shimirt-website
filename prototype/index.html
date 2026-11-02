@@ -12,6 +12,9 @@
 <meta property="og:title" content="מעצבת פנים במודיעין | שמרית אוחיון">
 <meta property="og:description" content="עיצוב פנים סינרגי לבתים פרטיים, דירות קבלן ופנטהאוזים במודיעין ובמרכז.">
 <meta property="og:url" content="https://www.shimrit-design.co.il/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -27,263 +30,253 @@
       "founder": { "@id": "https://www.shimrit-design.co.il/#shimrit" },
       "knowsAbout": ["עיצוב פנים", "עיצוב סינרגי", "פנג שואי", "עיצוב דירת קבלן", "שינויי דיירים", "הום סטיילינג"]
     },
+    { "@type": "Person", "@id": "https://www.shimrit-design.co.il/#shimrit", "name": "שמרית אוחיון", "jobTitle": "מעצבת פנים", "url": "https://www.shimrit-design.co.il/שמרית-אוחיון" },
+    { "@type": "WebSite", "@id": "https://www.shimrit-design.co.il/#website", "url": "https://www.shimrit-design.co.il/", "name": "שמרית אוחיון – תכנון ועיצוב פנים", "inLanguage": "he-IL", "publisher": { "@id": "https://www.shimrit-design.co.il/#business" } },
     {
-      "@type": "Person",
-      "@id": "https://www.shimrit-design.co.il/#shimrit",
-      "name": "שמרית אוחיון",
-      "jobTitle": "מעצבת פנים",
-      "url": "https://www.shimrit-design.co.il/שמרית-אוחיון"
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.shimrit-design.co.il/#website",
-      "url": "https://www.shimrit-design.co.il/",
-      "name": "שמרית אוחיון – תכנון ועיצוב פנים",
-      "inLanguage": "he-IL",
-      "publisher": { "@id": "https://www.shimrit-design.co.il/#business" }
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "באילו אזורים את עובדת?", "acceptedAnswer": { "@type": "Answer", "text": "הסטודיו נמצא במודיעין, ואני מתכננת ומלווה פרויקטים במודיעין ובכל אזור המרכז: תל אביב, ראשון לציון, פתח תקווה, רחובות, יהוד ומבשרת ציון. ייעוץ ממוקד אפשר לקיים גם בזום." } },
+        { "@type": "Question", "name": "כמה עולה מעצבת פנים?", "acceptedAnswer": { "@type": "Answer", "text": "המחיר תלוי בהיקף הפרויקט ובסוג הליווי: ייעוץ ממוקד, תכנון בלבד או ליווי מלא עד המסירה. במדריך המחירים באתר מפורט ממה מורכב המחיר." } },
+        { "@type": "Question", "name": "מה זה עיצוב סינרגי?", "acceptedAnswer": { "@type": "Answer", "text": "גישה הוליסטית שמשלבת תכנון פונקציונלי, אסתטיקה ועקרונות פנג שואי. מעבר לצרכים ולסגנון, אני בונה מפה אישית לבני הבית ומתרגמת אותה לחומרים, צבעים וצורות." } },
+        { "@type": "Question", "name": "כמה זמן לוקח פרויקט?", "acceptedAnswer": { "@type": "Answer", "text": "זה תלוי בהיקף ובשלב שבו הנכס נמצא. כבר בפגישת ההיכרות נבנה יחד לוח זמנים מותאם לפרויקט שלכם." } }
+      ]
     }
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-/* Layout idea: a white drafting table. Fine high-contrast Hebrew serif headlines, set airy like a design magazine,
-   the logo's two squares (gold, grey) as the only ornament,
-   and the synergy method itself – the bagua map and the five elements – as the page's images.
-   Single light theme by choice: the studio's world is white. */
+/* Layout idea: like a quiet gallery. A full-screen photograph with the name centered on it,
+   then one large image at a time, generous white space, a few calm words between.
+   Brand palette only (Shimrit Ochayon Brand Page): #000000, #FFFFFF, #BCBCBC, #C4A571 and their tints.
+   Single light theme by choice. */
 :root {
-  /* Brand palette – Shimrit Ochayon Brand Page: #000000, #FFFFFF, #BCBCBC, #C4A571.
-     Everything else is a tint of those four. */
   --white: #FFFFFF;
   --ink: #000000;
   --grey: #BCBCBC;
   --gold: #C4A571;
-  --text: rgba(0,0,0,.86);       /* running text: brand black, softened for long reading */
-  --ink-soft: rgba(0,0,0,.68);   /* secondary text */
-  --mist: #F5F5F5;               /* brand grey at ~15% on white */
-  --line: rgba(188,188,188,.55); /* brand grey hairline */
-  --gold-sq: var(--gold);
-  --grey-sq: var(--grey);
+  --text: rgba(0,0,0,.84);
+  --ink-soft: rgba(0,0,0,.62);
+  --mist: #F5F5F5;
+  --line: rgba(188,188,188,.6);
   --font-display: "Bellefair", "Frank Ruhl Libre", "David", serif;
   --font-body: "Assistant", "Arial Hebrew", Arial, sans-serif;
   --gutter: clamp(16px, 5vw, 80px);
-  --max: 1320px;
+  --max: 1240px;
   color-scheme: light;
 }
 * { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 html, body { margin: 0; }
-body { background: var(--white); color: var(--text); font-family: var(--font-body); font-weight: 400; font-size: 18px; line-height: 1.8; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
-p { max-width: 62ch; }
+body { background: var(--white); color: var(--text); font-family: var(--font-body); font-weight: 400; font-size: 18px; line-height: 1.8; -webkit-font-smoothing: antialiased; }
 a { color: inherit; }
-img, svg { max-width: 100%; }
+img { max-width: 100%; display: block; }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-h1, h2 { font-family: var(--font-display); font-weight: 400; margin: 0; line-height: 1.12; letter-spacing: -.005em; text-wrap: balance; color: var(--ink); }
-h3 { font-family: var(--font-body); font-weight: 600; margin: 0; line-height: 1.3; text-wrap: balance; color: var(--ink); }
-p { margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: 400; color: var(--ink); text-wrap: balance; }
+h2 { font-family: var(--font-display); font-size: clamp(36px, 4.2vw, 58px); line-height: 1.15; }
+h3 { font-family: var(--font-body); font-weight: 600; font-size: 22px; line-height: 1.35; }
+p { margin: 0; max-width: 60ch; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.narrow { max-width: 760px; margin: 0 auto; padding: 0 var(--gutter); text-align: center; }
+.narrow p { margin-inline: auto; }
+section { padding: clamp(80px, 11vw, 150px) 0; }
+.tint { background: var(--mist); }
 
-/* the logo's square pair, used as a section marker */
-h2.sq { font-family: var(--font-body); line-height: 1.4; }
-.sq { display: inline-flex; align-items: flex-end; font-size: 15px; font-weight: 600; color: var(--ink-soft); }
-.sq::before { content: ""; width: 14px; height: 14px; background: var(--gold-sq); box-shadow: -9px 9px 0 -3px var(--grey-sq); margin-inline-end: 18px; margin-bottom: 4px; }
-
-/* ---------- header ---------- */
-header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-.bar { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 78px; }
-.word { text-decoration: none; display: flex; flex-direction: column; line-height: 1; }
-.word b { font-family: var(--font-display); font-weight: 400; font-size: 32px; }
-.word span { font-size: 13px; letter-spacing: .04em; color: var(--ink-soft); margin-top: 2px; }
-nav ul { list-style: none; display: flex; gap: 34px; margin: 0; padding: 0; font-size: 16px; font-weight: 400; }
-nav a { text-decoration: none; background: linear-gradient(var(--gold), var(--gold)) no-repeat 100% 100% / 0 1px; transition: background-size .35s; padding-bottom: 3px; }
-nav a:hover { background-size: 100% 1px; }
-.btn { display: inline-flex; align-items: center; gap: 12px; font: 600 16px/1 var(--font-body); text-decoration: none; cursor: pointer; padding: 16px 28px; border: 1px solid var(--ink); background: var(--ink); color: var(--white); transition: background .3s, color .3s; }
+/* the logo's square pair as a quiet marker above section titles */
+.mark { display: inline-flex; align-items: center; gap: 14px; font-size: 15px; font-weight: 600; color: var(--ink-soft); margin-bottom: 18px; }
+.mark::before { content: ""; width: 12px; height: 12px; background: var(--gold); box-shadow: -8px 8px 0 -3px var(--grey); }
+.link { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; text-decoration: none; color: var(--ink); padding-bottom: 4px; border-bottom: 1px solid var(--gold); }
+.link::after { content: "←"; transition: transform .3s; }
+.link:hover::after { transform: translateX(-4px); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font: 600 16px/1 var(--font-body); text-decoration: none; cursor: pointer; padding: 17px 30px; border: 1px solid var(--ink); background: var(--ink); color: var(--white); transition: background .3s, color .3s, border-color .3s; }
 .btn:hover { background: var(--white); color: var(--ink); }
-.btn.line { background: transparent; color: var(--ink); }
-.btn.line:hover { background: var(--ink); color: var(--white); }
+.btn.gold { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.btn.gold:hover { background: transparent; color: var(--white); border-color: var(--white); }
+.btn.ghost-light { background: transparent; border-color: rgba(255,255,255,.75); color: var(--white); }
+.btn.ghost-light:hover { background: var(--white); color: var(--ink); }
 
 /* ---------- opening screen ---------- */
-.intro { position: fixed; inset: 0; z-index: 50; background: var(--white); display: grid; place-items: center; cursor: pointer; animation: lift .9s cubic-bezier(.7,0,.2,1) 2.5s forwards; }
-.intro-mark { position: relative; padding: 34px 54px; text-align: center; }
-.intro-mark::before, .intro-mark::after { content: ""; position: absolute; }
-.intro-mark::before { top: 0; left: 0; width: 46px; height: 46px; background: var(--gold-sq); animation: pop .6s ease .2s both; }
-.intro-mark::after { bottom: 0; right: 0; width: 26px; height: 26px; background: var(--grey-sq); animation: pop .6s ease .45s both; }
-.intro-mark b { display: block; font-family: var(--font-display); font-weight: 400; font-size: clamp(54px, 9vw, 108px); line-height: 1.05; animation: write 1.3s cubic-bezier(.45,.05,.25,1) .4s both; }
-.intro-mark span { display: block; font-size: 17px; letter-spacing: .06em; color: var(--ink-soft); margin-top: 10px; animation: fade .8s ease 1.4s both; }
+.intro { position: fixed; inset: 0; z-index: 60; background: var(--white); display: grid; place-items: center; cursor: pointer; animation: lift .9s cubic-bezier(.7,0,.2,1) 2.1s forwards; }
+.intro-mark { position: relative; padding: 30px 50px; text-align: center; }
+.intro-mark::before { content: ""; position: absolute; top: 0; left: 0; width: 40px; height: 40px; background: var(--gold); animation: pop .6s ease .15s both; }
+.intro-mark::after { content: ""; position: absolute; bottom: 0; right: 0; width: 22px; height: 22px; background: var(--grey); animation: pop .6s ease .35s both; }
+.intro-mark b { display: block; font-family: var(--font-display); font-weight: 400; font-size: clamp(48px, 8vw, 92px); line-height: 1.05; color: var(--ink); animation: write 1.2s cubic-bezier(.45,.05,.25,1) .3s both; }
+.intro-mark span { display: block; font-size: 17px; color: var(--ink-soft); margin-top: 6px; animation: fade .7s ease 1.2s both; }
 @keyframes write { from { clip-path: inset(0 0 0 100%); } to { clip-path: inset(0 0 0 0); } }
 @keyframes pop { from { transform: scale(0); } to { transform: scale(1); } }
 @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
 @keyframes lift { to { transform: translateY(-100%); visibility: hidden; } }
 .intro.done { display: none; }
 
+/* ---------- header (over the photo, then solid) ---------- */
+header { position: fixed; top: 0; inset-inline: 0; z-index: 20; color: var(--white); transition: background .4s, color .4s, box-shadow .4s; }
+header.solid { background: rgba(255,255,255,.96); color: var(--ink); box-shadow: 0 1px 0 var(--line); }
+.bar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 84px; }
+.word { grid-column: 2; text-decoration: none; text-align: center; line-height: 1; }
+.word b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 30px; }
+.word span { display: block; font-size: 13px; margin-top: 4px; opacity: .8; }
+nav { grid-column: 1; grid-row: 1; }
+nav ul { list-style: none; display: flex; gap: 28px; margin: 0; padding: 0; font-size: 16px; }
+nav a { text-decoration: none; opacity: .92; }
+nav a:hover { opacity: 1; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 6px; }
+.head-cta { grid-column: 3; justify-self: end; text-decoration: none; font-weight: 600; font-size: 16px; padding: 11px 20px; border: 1px solid currentColor; }
+.menu-btn { display: none; grid-column: 1; grid-row: 1; justify-self: start; background: none; border: 0; color: inherit; cursor: pointer; padding: 8px; }
+.menu-btn span { display: block; width: 26px; height: 1px; background: currentColor; margin: 7px 0; }
+
 /* ---------- hero ---------- */
-.hero { padding: clamp(40px, 6vw, 80px) 0 clamp(56px, 7vw, 96px); }
-.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(32px, 6vw, 96px); align-items: end; }
-.hero h1 { font-size: clamp(50px, 6.4vw, 100px); margin-top: 26px; }
-.hero h1 .thin { color: var(--ink-soft); display: block; }
-.hero h1 .kw { display: block; font-family: var(--font-body); font-size: 17px; font-weight: 600; color: var(--ink-soft); line-height: 1.4; margin-bottom: 18px; }
-.hero .lede { margin-top: 34px; font-size: clamp(18px, 1.5vw, 20px); line-height: 1.85; max-width: 36em; }
-.hero .lede strong { font-weight: 600; }
-.hero .lede a, .syn-text a:not(.more), .local a { text-decoration: none; border-bottom: 1px solid var(--gold-sq); }
-.hero .ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
+.hero { position: relative; min-height: min(92svh, 880px); display: grid; place-items: center; color: var(--white); text-align: center; overflow: hidden; background: #1a1a1a; }
+.hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); animation: settle 6s ease-out .2s forwards; }
+@keyframes settle { to { transform: scale(1); } }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.25) 40%, rgba(0,0,0,.55) 100%); }
+.hero-inner { position: relative; z-index: 1; padding: 120px var(--gutter) 90px; }
+.hero h1 { color: var(--white); font-size: 17px; font-family: var(--font-body); font-weight: 600; letter-spacing: .02em; }
+.hero .tag { font-family: var(--font-display); font-size: clamp(44px, 6.4vw, 92px); line-height: 1.12; margin: 18px auto 0; max-width: none; }
+.hero .tag em { font-style: normal; color: var(--gold); }
+.hero .ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 40px; }
+.hero .credit { position: absolute; z-index: 1; bottom: 18px; inset-inline-start: var(--gutter); font-size: 13px; opacity: .75; }
+.scroll { position: absolute; z-index: 1; bottom: 18px; left: 50%; transform: translateX(-50%); width: 1px; height: 46px; background: rgba(255,255,255,.6); overflow: hidden; }
+.scroll::after { content: ""; position: absolute; top: -46px; left: 0; width: 1px; height: 46px; background: var(--white); animation: drop 2.2s ease-in-out infinite; }
+@keyframes drop { to { top: 46px; } }
 
-.map svg { display: block; width: 100%; height: auto; }
-.map .wall { fill: none; stroke: var(--ink); stroke-width: 4; }
-.map .part { fill: none; stroke: var(--ink); stroke-width: 2; }
-.map .grid { fill: none; stroke: var(--gold); stroke-width: 1; stroke-dasharray: 4 5; }
-.map .cell { fill: var(--gold-sq); opacity: 0; transition: opacity .3s; }
-.map .cell.on { opacity: .28; }
-.map text { font-family: var(--font-body); font-size: 13px; fill: var(--ink-soft); pointer-events: none; }
-.map text.k { fill: var(--ink); font-weight: 600; }
-.map figcaption { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 15px; color: var(--ink-soft); border-top: 1px solid var(--line); margin-top: 14px; padding-top: 10px; }
-.map figcaption b { color: var(--ink); font-weight: 600; }
+/* trust strip */
+.trust { border-bottom: 1px solid var(--line); }
+.trust ul { list-style: none; margin: 0 auto; padding: 30px var(--gutter); max-width: var(--max); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px 40px; }
+.trust li { display: flex; align-items: baseline; gap: 12px; font-size: 16px; color: var(--ink-soft); }
+.trust b { font-family: var(--font-display); font-weight: 400; font-size: 44px; line-height: 1; color: var(--ink); }
 
-.facts { display: flex; flex-wrap: wrap; border-top: 1px solid var(--ink); margin-top: clamp(48px, 6vw, 80px); }
-.fact { flex: 1 1 200px; padding: 22px 0 0; display: flex; align-items: baseline; gap: 14px; }
-.fact b { font-family: var(--font-display); font-weight: 400; font-size: 56px; line-height: 1; font-variant-numeric: tabular-nums; }
-.fact span { font-size: 16px; color: var(--ink-soft); line-height: 1.35; }
+/* about (right after the hero, like a handshake) */
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 7vw, 110px); align-items: center; }
+.about h2 { margin-bottom: 22px; }
+.about p + p { margin-top: 16px; }
+.about .link { margin-top: 30px; }
+.portrait { aspect-ratio: 4 / 5; background: var(--mist); position: relative; }
+.portrait::before { content: ""; position: absolute; top: -18px; inset-inline-start: -18px; width: 64px; height: 64px; background: var(--gold); }
+.portrait::after { content: ""; position: absolute; bottom: -12px; inset-inline-end: -12px; width: 32px; height: 32px; background: var(--grey); }
+.ph { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 20px; font-size: 15px; color: var(--ink-soft); }
 
-/* ---------- sections ---------- */
-section { padding: clamp(72px, 10vw, 140px) 0; }
-.tint { background: var(--mist); }
-.head { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px 40px; margin-bottom: clamp(36px, 5vw, 64px); }
-.head h2 { font-size: clamp(38px, 4.4vw, 66px); margin-top: 18px; }
-.head p { color: var(--ink-soft); max-width: 30em; }
-.more { font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 3px; white-space: nowrap; }
+/* projects: one large image at a time */
+.sec-head { display: flex; justify-content: space-between; align-items: end; gap: 20px 40px; flex-wrap: wrap; margin-bottom: clamp(36px, 5vw, 60px); }
+.projects { display: grid; gap: clamp(48px, 7vw, 96px); }
+.proj { display: grid; grid-template-columns: 1.6fr 1fr; gap: clamp(24px, 4vw, 56px); align-items: end; text-decoration: none; }
+.proj:nth-child(even) { grid-template-columns: 1fr 1.6fr; }
+.proj:nth-child(even) .shot { order: 2; }
+.shot { position: relative; aspect-ratio: 3 / 2; background: var(--mist); overflow: hidden; }
+.shot img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
+.proj:hover .shot img { transform: scale(1.04); }
+.proj h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(30px, 3vw, 42px); line-height: 1.15; }
+.proj .meta { color: var(--ink-soft); font-size: 16px; margin-top: 6px; }
+.proj .link { margin-top: 22px; }
 
 /* synergy */
-.syn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 120px); align-items: start; }
-.big-quote { font-family: var(--font-display); font-size: clamp(34px, 3.6vw, 54px); line-height: 1.2; margin-top: 22px; text-wrap: balance; }
-.big-quote em { font-style: normal; color: var(--gold); }
-.syn-text p.body { margin-top: 22px; max-width: 34em; }
-.syn-text p.body:first-of-type { margin-top: 34px; }
+.syn h2 em { font-style: normal; color: var(--gold); }
+.syn .lede { margin-top: 22px; font-size: 19px; }
+.pillars { list-style: none; margin: clamp(40px, 5vw, 64px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 4vw, 56px); text-align: start; }
+.pillars li { border-top: 1px solid var(--ink); padding-top: 22px; }
+.pillars p { color: var(--ink-soft); margin-top: 8px; font-size: 17px; }
+.syn .link { margin-top: 44px; }
 
-.elements { background: var(--white); border: 1px solid var(--line); padding: clamp(20px, 3vw, 36px); }
-.elements h3 { font-size: 26px; }
-.elements .hint { font-size: 15px; color: var(--ink-soft); margin-top: 6px; }
-.wheel { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: center; margin-top: 22px; }
-.wheel svg { width: 100%; height: auto; }
-.wheel .cycle { fill: none; stroke: var(--line); stroke-width: 1.4; }
-.el { cursor: pointer; }
-.el circle { fill: var(--white); stroke: var(--ink); stroke-width: 1.2; transition: fill .3s; }
-.el text { font-family: var(--font-display); font-size: 19px; text-anchor: middle; dominant-baseline: central; fill: var(--ink); pointer-events: none; }
-.el:hover circle { fill: var(--mist); }
-.el.on circle { fill: var(--ink); }
-.el.on text { fill: var(--white); }
-.el:focus { outline: none; }
-.el:focus-visible circle { stroke: var(--gold); stroke-width: 3; }
-.el-card dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; margin: 0; font-size: 17px; line-height: 1.6; }
-.el-card dt { color: var(--ink-soft); }
-.el-card dd { margin: 0; font-weight: 400; }
-.el-card .name { font-family: var(--font-display); font-size: 46px; line-height: 1; margin-bottom: 12px; display: flex; align-items: center; gap: 14px; }
-.swatches { display: flex; gap: 6px; }
-.swatches i { width: 22px; height: 22px; display: block; border: 1px solid rgba(0,0,0,.1); }
+/* testimonials */
+.quotes { position: relative; text-align: center; }
+.quote { display: none; }
+.quote.on { display: block; animation: fade .6s ease; }
+.quote blockquote { margin: 0 auto; max-width: 30ch; font-family: var(--font-display); font-size: clamp(28px, 3vw, 40px); line-height: 1.35; color: var(--ink); }
+.quote cite { display: block; margin-top: 22px; font-style: normal; font-size: 16px; color: var(--ink-soft); }
+.dots { display: flex; justify-content: center; gap: 10px; margin-top: 34px; }
+.dots button { width: 28px; height: 2px; border: 0; padding: 8px 0; background: var(--grey); background-clip: content-box; cursor: pointer; }
+.dots button[aria-current="true"] { background-color: var(--ink); }
+.note-ph { display: inline-block; margin-top: 20px; font-size: 14px; color: var(--ink-soft); border: 1px dashed var(--grey); padding: 4px 12px; }
 
-/* method */
-.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--ink); counter-reset: s; }
-.steps li { counter-increment: s; padding: 26px 22px 0; border-inline-start: 1px solid var(--line); }
-.steps li:first-child { border-inline-start: 0; padding-inline-start: 0; }
-.steps li::before { content: counter(s); font-family: var(--font-display); font-size: 52px; line-height: 1; color: var(--gold); display: block; margin-bottom: 18px; }
-.steps h3 { font-size: 21px; }
-.steps p { color: var(--ink-soft); font-size: 17px; margin-top: 8px; }
+/* paths */
+.paths { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(16px, 2vw, 24px); }
+.path { display: flex; flex-direction: column; gap: 10px; padding: 30px 26px; border: 1px solid var(--line); text-decoration: none; background: var(--white); transition: border-color .3s, transform .3s; }
+.path:hover { border-color: var(--gold); transform: translateY(-4px); }
+.path .n { font-family: var(--font-display); font-size: 40px; line-height: 1; color: var(--gold); }
+.path p { color: var(--ink-soft); font-size: 16px; }
+.path .go { margin-top: auto; padding-top: 14px; font-weight: 600; font-size: 15px; }
 
-/* projects */
-.projects { display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(16px, 2vw, 28px); }
-.proj { text-decoration: none; display: flex; flex-direction: column; gap: 12px; grid-column: span 2; }
-.proj:nth-child(1) { grid-column: span 4; }
-.frame { position: relative; background: var(--white); border: 1px solid var(--line); aspect-ratio: 4 / 5; overflow: hidden; }
-.proj:nth-child(1) .frame { aspect-ratio: auto; flex: 1; min-height: 320px; }
-.frame::before { content: ""; position: absolute; inset: 14px; border: 1px solid var(--line); }
-.frame span { position: absolute; bottom: 24px; inset-inline-start: 24px; font-size: 14px; color: var(--ink-soft); }
-.frame::after { content: ""; position: absolute; top: 24px; inset-inline-end: 24px; width: 18px; height: 18px; background: var(--gold-sq); transition: transform .5s; }
-.proj:hover .frame::after { transform: rotate(90deg); }
-.proj h3 { font-size: 22px; }
-.proj .where { color: var(--ink-soft); font-size: 15px; margin-top: -6px; }
+/* process */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(20px, 3vw, 40px); counter-reset: s; }
+.steps li { counter-increment: s; }
+.steps li::before { content: "0" counter(s); display: block; font-family: var(--font-display); font-size: 46px; line-height: 1; color: var(--gold); margin-bottom: 14px; }
+.steps p { color: var(--ink-soft); margin-top: 8px; font-size: 17px; }
+.after { margin-top: clamp(40px, 5vw, 60px); padding: 24px 28px; background: var(--mist); display: flex; gap: 16px; align-items: center; flex-wrap: wrap; justify-content: space-between; }
+.after p { max-width: none; }
 
-.local { margin-top: clamp(48px, 6vw, 72px); border-top: 1px solid var(--ink); padding-top: 22px; }
-.local h3 { font-size: 24px; }
-.local ul { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; font-size: 17px; line-height: 2; }
-.local li { max-width: none; }
-.local li { display: grid; grid-template-columns: 170px 1fr; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
-.local b { font-weight: 600; }
-@media (max-width: 640px) { .local li { grid-template-columns: 1fr; gap: 4px; } }
+/* faq */
+.faq { max-width: 860px; margin: 0 auto; }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; padding: 24px 0; display: flex; justify-content: space-between; gap: 20px; font-weight: 600; font-size: 20px; color: var(--ink); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--font-display); font-size: 30px; line-height: 1; color: var(--gold); transition: transform .3s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 0 26px; color: var(--ink-soft); }
 
-/* services */
-.services { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: clamp(32px, 6vw, 96px); }
-.services li { break-inside: avoid; }
-.services a { display: block; text-decoration: none; padding: 26px 0; border-top: 1px solid var(--line); }
-.services h3 { font-size: 24px; transition: color .3s; }
-.services a:hover h3 { color: var(--gold); }
-.services p { color: var(--ink-soft); font-size: 17px; margin-top: 6px; }
+/* guides */
+.guides { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3vw, 40px); }
+.guide { text-decoration: none; display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--ink); padding-top: 22px; }
+.guide .cat { font-size: 14px; font-weight: 600; color: var(--ink-soft); display: inline-flex; align-items: center; gap: 8px; }
+.guide .cat::before { content: ""; width: 8px; height: 8px; background: var(--gold); }
+.guide p { color: var(--ink-soft); font-size: 17px; }
 
-/* journal */
-.journal { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 3vw, 44px); }
-.post { text-decoration: none; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--ink); padding-top: 20px; }
-.post .cat { font-size: 14px; font-weight: 600; color: var(--ink); display: inline-flex; align-items: center; gap: 8px; }
-.post .cat::before { content: ""; width: 8px; height: 8px; background: var(--gold); }
-.post h3 { font-size: 24px; }
-.post p { color: var(--ink-soft); font-size: 17px; }
-
-.more-guides { list-style: none; margin: 32px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
-.more-guides a { display: inline-block; text-decoration: none; font-size: 16px; padding: 8px 16px; border: 1px solid var(--line); background: var(--white); transition: border-color .3s; }
-.more-guides a:hover { border-color: var(--gold); }
-
-/* contact */
-.contact { background: var(--ink); color: var(--white); }
-.contact .sq, .contact .sub, .contact .channels span, .contact .field label, .contact .check { color: rgba(255,255,255,.7); }
-.contact .field input, .contact .field select { color: var(--white); border-bottom-color: rgba(255,255,255,.45); }
-.contact .field select option { color: var(--ink); }
-.contact .check input { accent-color: var(--gold); }
-.contact .btn { background: var(--gold); border-color: var(--gold); color: var(--ink); }
-.contact .btn:hover { background: transparent; color: var(--white); }
-.contact .more { color: var(--white); }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 120px); }
-.contact h2 { font-size: clamp(44px, 5.4vw, 80px); margin-top: 18px; }
-.contact .sub { margin-top: 24px; color: var(--ink-soft); max-width: 30em; }
-.channels { margin-top: 30px; display: grid; gap: 6px; font-size: 16px; }
-.channels span { color: var(--ink-soft); }
+/* final CTA */
+.close { background: var(--ink); color: rgba(255,255,255,.86); }
+.close h2 { color: var(--white); font-size: clamp(40px, 5vw, 70px); }
+.close .mark { color: rgba(255,255,255,.7); }
+.close-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 110px); }
+.close .sub { margin-top: 20px; }
+.channels { margin-top: 30px; display: grid; gap: 8px; }
+.channels span { color: rgba(255,255,255,.6); }
 form { display: grid; gap: 22px; }
 .field { display: grid; gap: 4px; }
-.field label { font-size: 15px; color: var(--ink-soft); }
-.field input, .field select { font: 400 19px var(--font-body); color: var(--ink); background: transparent; border: 0; border-bottom: 1px solid var(--ink); padding: 8px 0; border-radius: 0; }
+.field label { font-size: 15px; color: rgba(255,255,255,.7); }
+.field input, .field select { font: 400 19px var(--font-body); color: var(--white); background: transparent; border: 0; border-bottom: 1px solid rgba(255,255,255,.45); padding: 8px 0; border-radius: 0; }
+.field select option { color: var(--ink); }
 .field input:focus, .field select:focus { outline: none; border-bottom-color: var(--gold); }
-.check { display: flex; gap: 10px; align-items: flex-start; font-size: 15px; color: var(--ink-soft); }
-.check input { margin-top: 6px; accent-color: var(--ink); }
 form .btn { justify-self: start; }
-.note { font-size: 15px; color: var(--gold); min-height: 1.4em; } /* on black: 9:1 */
+.note { font-size: 15px; color: var(--gold); min-height: 1.4em; }
 
-footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 15px; color: var(--ink-soft); }
-.foot { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: center; }
-.foot ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; flex-wrap: wrap; }
-.foot a { text-decoration: none; }
+/* footer */
+footer { padding: 64px 0 28px; background: var(--white); font-size: 16px; }
+.cols { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.4fr; gap: 32px; }
+.cols h4 { margin: 0 0 14px; font-size: 15px; font-weight: 600; color: var(--ink); }
+.cols ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.cols a { text-decoration: none; color: var(--ink-soft); }
+.cols a:hover { color: var(--ink); }
+.foot-word b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 30px; color: var(--ink); line-height: 1; }
+.foot-word span { display: block; margin-top: 6px; color: var(--ink-soft); font-size: 15px; }
+.copy { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 14px; color: var(--ink-soft); }
+.copy a { text-decoration: none; }
+
+/* floating WhatsApp */
+.wa { position: fixed; z-index: 30; bottom: 22px; inset-inline-start: 22px; width: 58px; height: 58px; border-radius: 50%; background: var(--ink); color: var(--white); display: grid; place-items: center; text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,.2); transition: transform .3s, background .3s; }
+.wa:hover { transform: scale(1.06); background: var(--gold); color: var(--ink); }
+.wa svg { width: 28px; height: 28px; }
 
 /* ---------- responsive ---------- */
-@media (max-width: 1040px) {
-  nav { display: none; }
-  .hero-grid, .syn-grid, .contact-grid { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: 1fr 1fr; row-gap: 32px; }
-  .steps li:nth-child(odd) { border-inline-start: 0; padding-inline-start: 0; }
-  .proj:nth-child(n) { grid-column: span 3; }
-  .proj:nth-child(1) { grid-column: span 6; }
-  .proj:nth-child(1) .frame { aspect-ratio: 16 / 10; flex: none; min-height: 0; }
-  .journal { grid-template-columns: 1fr 1fr; }
+@media (max-width: 1000px) {
+  nav, .head-cta { display: none; }
+  .menu-btn { display: block; }
+  nav.open { display: block; position: fixed; inset: 84px 0 auto; background: var(--white); color: var(--ink); padding: 20px var(--gutter) 28px; box-shadow: 0 10px 20px rgba(0,0,0,.08); }
+  nav.open ul { flex-direction: column; gap: 14px; font-size: 19px; }
+  .about, .close-grid { grid-template-columns: 1fr; }
+  .proj, .proj:nth-child(even) { grid-template-columns: 1fr; }
+  .proj:nth-child(even) .shot { order: 0; }
+  .paths { grid-template-columns: 1fr 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .pillars { grid-template-columns: 1fr; }
+  .guides { grid-template-columns: 1fr; }
+  .cols { grid-template-columns: 1fr 1fr; }
 }
-@media (max-width: 640px) {
+@media (max-width: 560px) {
   body { font-size: 17px; }
-  .bar .btn { display: none; }
-  .head { grid-template-columns: 1fr; }
-  .wheel { grid-template-columns: 1fr; }
-  .wheel svg { max-width: 260px; margin: 0 auto; }
-  .steps { grid-template-columns: 1fr; }
-  .steps li { border-inline-start: 0; padding-inline-start: 0; }
-  .proj:nth-child(n) { grid-column: span 6; }
-  .services { columns: 1; }
-  .journal { grid-template-columns: 1fr; }
+  .paths, .steps, .cols { grid-template-columns: 1fr; }
+  .trust ul { justify-content: flex-start; }
+  .hero .credit { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .intro { display: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
 }
 </style>
 </head>
@@ -294,229 +287,199 @@ footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 15px; co
   <div class="intro-mark"><b>שמרית אוחיון</b><span>תכנון ועיצוב פנים</span></div>
 </div>
 
-<header>
+<header id="top-bar">
   <div class="wrap bar">
-    <a class="word" href="#top" aria-label="שמרית אוחיון – לדף הבית"><b>שמרית אוחיון</b><span>תכנון ועיצוב פנים</span></a>
-    <nav aria-label="ניווט ראשי">
+    <button class="menu-btn" id="menu-btn" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <nav id="nav" aria-label="ניווט ראשי">
       <ul>
-        <li><a href="#synergy">עיצוב סינרגי</a></li>
-        <li><a href="#method">התהליך</a></li>
+        <li><a href="#about">אודות</a></li>
         <li><a href="#projects">פרויקטים</a></li>
-        <li><a href="#services">שירותים</a></li>
-        <li><a href="#journal">מאמרים</a></li>
+        <li><a href="#synergy">עיצוב סינרגי</a></li>
+        <li><a href="#paths">שירותים</a></li>
+        <li><a href="#guides">מאמרים</a></li>
       </ul>
     </nav>
-    <a class="btn line" href="#contact">לפגישת היכרות</a>
+    <a class="word" href="#top" aria-label="שמרית אוחיון – לראש הדף"><b>שמרית אוחיון</b><span>תכנון ועיצוב פנים</span></a>
+    <a class="head-cta" href="#contact">לפגישת היכרות</a>
   </div>
 </header>
 
 <main id="top">
+  <!-- 1. HERO -->
   <div class="hero">
-    <div class="wrap">
-      <div class="hero-grid">
-        <div>
-          <p class="sq">עיצוב פנים סינרגי</p>
-          <h1><span class="kw">שמרית אוחיון · מעצבת פנים במודיעין ובמרכז</span>בית שמרגיש נכון<span class="thin">לא רק נראה נכון</span></h1>
-          <p class="lede">אני <a href="https://www.shimrit-design.co.il/שמרית-אוחיון">שמרית אוחיון</a>, מעצבת פנים <strong>ומאסטר באדריכלות סינרגית</strong>. אני מתכננת <a href="https://www.shimrit-design.co.il/עיצוב-בתים-פרטיים">בתים פרטיים</a>, <a href="https://www.shimrit-design.co.il/עיצוב-פנים-דירת-קבלן">דירות קבלן</a> ופנטהאוזים במודיעין ובמרכז, ומשלבת תכנון פונקציונלי, אסתטיקה ועקרונות פנג שואי כדי ליצור בית שתומך בכם בכל יום.</p>
-          <div class="ctas">
-            <a class="btn" href="#contact">לתיאום פגישת היכרות</a>
-            <a class="btn line" href="#synergy">מה זה עיצוב סינרגי</a>
-          </div>
-        </div>
-
-        <figure class="map" style="margin:0">
-          <svg viewBox="0 0 420 425" role="img" aria-label="תוכנית דירה ועליה רשת הבאגואה של הפנג שואי: תשעה אזורים של הבית">
-            <g>
-              <rect class="cell" data-i="0" x="20" y="20" width="126.7" height="126.7"/>
-              <rect class="cell" data-i="1" x="146.7" y="20" width="126.7" height="126.7"/>
-              <rect class="cell" data-i="2" x="273.3" y="20" width="126.7" height="126.7"/>
-              <rect class="cell" data-i="3" x="20" y="146.7" width="126.7" height="126.7"/>
-              <rect class="cell on" data-i="4" x="146.7" y="146.7" width="126.7" height="126.7"/>
-              <rect class="cell" data-i="5" x="273.3" y="146.7" width="126.7" height="126.7"/>
-              <rect class="cell" data-i="6" x="20" y="273.3" width="126.7" height="126.7"/>
-              <rect class="cell" data-i="7" x="146.7" y="273.3" width="126.7" height="126.7"/>
-              <rect class="cell" data-i="8" x="273.3" y="273.3" width="126.7" height="126.7"/>
-            </g>
-            <path class="wall" d="M190 400 H20 V20 H400 V400 H230"/>
-            <path class="part" d="M250 20 V170 M250 210 V240 H400 M20 250 H120 M160 250 H190 V400"/>
-            <path class="grid" d="M146.7 20 V400 M273.3 20 V400 M20 146.7 H400 M20 273.3 H400"/>
-            <text x="83" y="44" text-anchor="middle">עושר ושפע</text>
-            <text x="210" y="44" text-anchor="middle">מוניטין</text>
-            <text x="337" y="44" text-anchor="middle">זוגיות</text>
-            <text x="83" y="170" text-anchor="middle">משפחה</text>
-            <text class="k" x="210" y="214" text-anchor="middle">מרכז · בריאות</text>
-            <text x="337" y="170" text-anchor="middle">יצירה וילדים</text>
-            <text x="83" y="382" text-anchor="middle">ידע</text>
-            <text x="210" y="382" text-anchor="middle">קריירה</text>
-            <text x="337" y="382" text-anchor="middle">אנשים מועילים</text>
-            <text class="k" x="210" y="420" text-anchor="middle">כניסה</text>
-          </svg>
-          <figcaption><span>מפת הבית: תשעת אזורי הבאגואה על תוכנית הדירה</span><b id="zone">מרכז · בריאות</b></figcaption>
-        </figure>
-      </div>
-
-      <div class="facts">
-        <div class="fact"><b>15</b><span>שנות ניסיון<br>בתכנון ועיצוב</span></div>
-        <div class="fact"><b>200+</b><span>פרויקטים<br>שנמסרו</span></div>
-        <div class="fact"><b>M.A</b><span>אדריכלות<br>סינרגית</span></div>
+    <img src="assets/kitchen-suzy-levinson.jpg" alt="מטבח בגוון אפור כהה עם נישת עץ ומשטח בהיר, בעיצוב שמרית אוחיון" width="900" height="600" fetchpriority="high">
+    <div class="hero-inner">
+      <h1>שמרית אוחיון · מעצבת פנים במודיעין ובמרכז</h1>
+      <p class="tag">בית שמרגיש נכון,<br><em>לא רק נראה נכון</em></p>
+      <div class="ctas">
+        <a class="btn gold" href="#contact">לתיאום פגישת היכרות</a>
+        <a class="btn ghost-light" href="#projects">לפרויקטים</a>
       </div>
     </div>
+    <span class="credit">צילום: סוזי לוינסון</span>
+    <span class="scroll" aria-hidden="true"></span>
   </div>
 
-  <!-- SYNERGY -->
-  <section id="synergy" class="tint">
-    <div class="wrap syn-grid">
-      <div class="syn-text">
-        <h2 class="sq">עיצוב סינרגי: הגישה ההוליסטית לעיצוב פנים</h2>
-        <p class="big-quote">הבית הוא <em>מערכת חיה</em>, לא אוסף של קירות, ריהוט וטרנדים</p>
-        <p class="body">עיצוב פנים רגיל שואל איך החלל ייראה. עיצוב סינרגי שואל איך החלל ישפיע על מי שחי בו: מבחינה פונקציונלית, אסתטית ואנרגטית, בו־זמנית.</p>
-        <p class="body">מעבר לפרוגרמה הרגילה של צרכים ומספר חדרים, אני מפיקה לכל אחד מבני הבית מפה אישית שמראה את התפלגות חמשת היסודות. כך אני יודעת אילו יסודות צריך לחזק ואילו למתן, ומתרגמת את זה לחומרים, לצבעים ולצורות.</p>
-        <p class="body">רוצים להעמיק? קראו <a href="https://www.shimrit-design.co.il/איך-עיצוב-סינרגי-משפיע-על-האווירה-בבית">איך עיצוב סינרגי משפיע על האווירה בבית</a>, על <a href="https://www.shimrit-design.co.il/פנג-שואי-חדר-שינה">פנג שואי בחדר השינה</a> ועל <a href="https://www.shimrit-design.co.il/חומרים-טבעיים-לעיצוב-פנים">חומרים טבעיים בעיצוב פנים</a>.</p>
-        <p class="body"><a class="more" href="https://www.shimrit-design.co.il/עיצוב-סינרגי">כל מה שצריך לדעת על עיצוב סינרגי</a></p>
-      </div>
+  <!-- 2. TRUST -->
+  <div class="trust">
+    <ul>
+      <li><b>15</b>שנות ניסיון</li>
+      <li><b>200+</b>פרויקטים שנמסרו</li>
+      <li><b>M.A</b>מאסטר באדריכלות סינרגית</li>
+      <li><b>מודיעין</b>והמרכז</li>
+    </ul>
+  </div>
 
-      <div class="elements">
-        <h3>חמשת היסודות בחלל</h3>
-        <p class="hint">בחרו יסוד וראו איך הוא נכנס לבית</p>
-        <div class="wheel">
-          <svg viewBox="0 0 220 220" role="group" aria-label="מעגל חמשת היסודות">
-            <path class="cycle" d="M110 28 L188 85 L158 177 L62 177 L32 85 Z"/>
-            <g class="el on" tabindex="0" role="button" aria-pressed="true" data-el="wood"><circle cx="110" cy="28" r="26"/><text x="110" y="30">עץ</text></g>
-            <g class="el" tabindex="0" role="button" aria-pressed="false" data-el="fire"><circle cx="188" cy="85" r="26"/><text x="188" y="87">אש</text></g>
-            <g class="el" tabindex="0" role="button" aria-pressed="false" data-el="earth"><circle cx="158" cy="177" r="26"/><text x="158" y="179">אדמה</text></g>
-            <g class="el" tabindex="0" role="button" aria-pressed="false" data-el="metal"><circle cx="62" cy="177" r="26"/><text x="62" y="179">מתכת</text></g>
-            <g class="el" tabindex="0" role="button" aria-pressed="false" data-el="water"><circle cx="32" cy="85" r="26"/><text x="32" y="87">מים</text></g>
-          </svg>
-          <div class="el-card" aria-live="polite">
-            <div class="name"><span id="el-name">עץ</span><span class="swatches" id="el-sw"><i style="background:#5E7552"></i><i style="background:#9C7B57"></i><i style="background:#C9B48F"></i></span></div>
-            <dl>
-              <dt>חומרים</dt><dd id="el-mat">חיפויי עץ, פרטי נגרות, צמחייה</dd>
-              <dt>צורה</dt><dd id="el-shape">קווים אנכיים ומוארכים</dd>
-              <dt>מתי</dt><dd id="el-when">כשצריך צמיחה, התחדשות ותנועה קדימה</dd>
-            </dl>
-          </div>
-        </div>
+  <!-- 3. ABOUT -->
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <p class="mark">נעים להכיר</p>
+        <h2>שמרית אוחיון</h2>
+        <p>מעצבת פנים ומאסטר באדריכלות סינרגית. כבר 15 שנה אני מתכננת ומלווה משפחות שבונות בית פרטי, רוכשות <a href="https://www.shimrit-design.co.il/עיצוב-פנים-דירת-קבלן">דירת קבלן</a> או משפצות את הבית.</p>
+        <p>אני מאמינה שבית הוא הרבה מעבר לקירות. המטרה שלי היא חלל שתומך בכם, מרגיע אתכם ונראה מדויק בדיוק לאנשים שגרים בו.</p>
+        <a class="link" href="https://www.shimrit-design.co.il/שמרית-אוחיון">עוד עליי</a>
       </div>
+      <div class="portrait"><span class="ph">כאן תיכנס תמונה של שמרית</span></div>
     </div>
   </section>
 
-  <!-- METHOD -->
-  <section id="method">
-    <div class="wrap">
-      <div class="head">
-        <div><p class="sq">התהליך</p><h2>תהליך עיצוב הפנים: מהמפה האישית ועד המפתח</h2></div>
-        <p>כל שלבי עיצוב הפנים, ובנוסף שכבה סינרגית שמדייקת כל החלטה לאנשים שגרים בבית.</p>
-      </div>
-      <ol class="steps">
-        <li><h3>היכרות ופרוגרמה</h3><p>צרכים, סגנון, תקציב ואורח החיים של כל בני הבית.</p></li>
-        <li><h3>מפה אישית</h3><p>תאריך ושעת לידה של בני הבית, והתפלגות חמשת היסודות אצל כל אחד.</p></li>
-        <li><h3>מפת הבית</h3><p>האזורים שצריך לאזן, והאזורים שבהם מעצימים את מה שכבר טוב.</p></li>
-        <li><h3>תכנון וחומרים</h3><p>תוכניות עבודה, ובחירת חומרים, צבעים וצורות לפי היסודות.</p></li>
-        <li><h3>ליווי עד המסירה</h3><p>רכש, פיקוח בשטח ועד הפרט האחרון לפני שנכנסים.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
+  <!-- 4. PROJECTS -->
   <section id="projects" class="tint">
     <div class="wrap">
-      <div class="head">
-        <div><p class="sq">פרויקטים נבחרים</p><h2>פרויקטים בעיצוב פנים במודיעין ובמרכז</h2></div>
-        <a class="more" href="https://www.shimrit-design.co.il/">לכל הפרויקטים</a>
+      <div class="sec-head">
+        <div><p class="mark">פרויקטים נבחרים</p><h2>עיצוב פנים במודיעין ובמרכז</h2></div>
+        <a class="link" href="https://www.shimrit-design.co.il/">לכל הפרויקטים</a>
       </div>
       <div class="projects">
-        <a class="proj" href="https://www.shimrit-design.co.il/פנטהאוז-יוקרתי-במודיעין"><div class="frame"><span>תמונה מהפרויקט</span></div><h3>פנטהאוז יוקרתי</h3><p class="where">מודיעין</p></a>
-        <a class="proj" href="https://www.shimrit-design.co.il/דירת-גג-מטריפה--שכונת-בבלי-תל-אביב"><div class="frame"><span>תמונה מהפרויקט</span></div><h3>דירת גג בבבלי</h3><p class="where">תל אביב</p></a>
-        <a class="proj" href="https://www.shimrit-design.co.il/שיפוץ-ועיצוב-טריפלקס-במבשרת-ציון"><div class="frame"><span>תמונה מהפרויקט</span></div><h3>טריפלקס</h3><p class="where">מבשרת ציון</p></a>
-        <a class="proj" href="https://www.shimrit-design.co.il/מהפך-לדירת-קבלן-ביהוד"><div class="frame"><span>תמונה מהפרויקט</span></div><h3>מהפך לדירת קבלן</h3><p class="where">יהוד</p></a>
-        <a class="proj" href="https://www.shimrit-design.co.il/בית-פרטי-בראשון-לציון"><div class="frame"><span>תמונה מהפרויקט</span></div><h3>בית פרטי</h3><p class="where">ראשון לציון</p></a>
-      </div>
-      <div class="local">
-        <h3>עיצוב פנים לפי אזור</h3>
-        <ul>
-          <li><b>מודיעין</b><span><a href="https://www.shimrit-design.co.il/עיצוב-פנים-במודיעין">מעצבת פנים במודיעין</a> · <a href="https://www.shimrit-design.co.il/פנטהאוז-יוקרתי-במודיעין">פנטהאוז יוקרתי</a> · <a href="https://www.shimrit-design.co.il/עיצוב-פנטהואז-מודרני-קלאסי-במודיעין">פנטהאוז מודרני קלאסי</a> · <a href="https://www.shimrit-design.co.il/דירה-מודרנית-חמה--מודיעין">דירה מודרנית חמה</a> · <a href="https://www.shimrit-design.co.il/עיצוב-דירה-אורבנית--מודיעין">דירה אורבנית</a> · <a href="https://www.shimrit-design.co.il/שיפוץ-בית-פרטי-מודרני-אקלקטי-במודיעין">בית פרטי אקלקטי</a> · <a href="https://www.shimrit-design.co.il/עיצוב-בר-קפה-במודיעין">בר קפה</a></span></li>
-          <li><b>תל אביב</b><span><a href="https://www.shimrit-design.co.il/דירת-גג-מטריפה--שכונת-בבלי-תל-אביב">דירת גג בבבלי</a> · <a href="https://www.shimrit-design.co.il/שינויי-דיירים-דירת-קבלן-תל-אביב">שינויי דיירים בדירת קבלן</a> · <a href="https://www.shimrit-design.co.il/עיצוב-סינרגי-תל-אביב">עיצוב סינרגי בתל אביב</a></span></li>
-          <li><b>ראשון לציון</b><span><a href="https://www.shimrit-design.co.il/בית-פרטי-בראשון-לציון">בית פרטי</a> · <a href="https://www.shimrit-design.co.il/עיצוב-פנים-יוקרתי-לדירה-בראשון-לציון">דירת יוקרה</a></span></li>
-          <li><b>פתח תקווה</b><span><a href="https://www.shimrit-design.co.il/דופלקס---פתח-תקווה">דופלקס</a> · <a href="https://www.shimrit-design.co.il/השבחת-נכסים--עיצוב-דירה-למכירה--פתח-תקווה">השבחת דירה למכירה</a></span></li>
-          <li><b>רחובות, יהוד ומבשרת ציון</b><span><a href="https://www.shimrit-design.co.il/עיצוב-דירת-קבלן-ברחובות-בסגנון-קלאסי-מודרני">דירת קבלן ברחובות</a> · <a href="https://www.shimrit-design.co.il/מהפך-לדירת-קבלן-ביהוד">מהפך לדירת קבלן ביהוד</a> · <a href="https://www.shimrit-design.co.il/שיפוץ-ועיצוב-טריפלקס-במבשרת-ציון">טריפלקס במבשרת</a></span></li>
-          <li><b>כל המרכז</b><span><a href="https://www.shimrit-design.co.il/מעצבת-פנים-במרכז">מעצבת פנים במרכז</a> · <a href="https://www.shimrit-design.co.il/עיצוב-ותכנון-פנים-לבית-פרטי-במרכז">בית פרטי במרכז</a></span></li>
-        </ul>
+        <a class="proj" href="https://www.shimrit-design.co.il/פנטהאוז-יוקרתי-במודיעין">
+          <div class="shot"><span class="ph">תמונה מהפרויקט</span></div>
+          <div><h3>פנטהאוז יוקרתי</h3><p class="meta">מודיעין · תכנון, עיצוב וליווי</p><span class="link">לפרויקט</span></div>
+        </a>
+        <a class="proj" href="https://www.shimrit-design.co.il/דירת-גג-מטריפה--שכונת-בבלי-תל-אביב">
+          <div class="shot"><span class="ph">תמונה מהפרויקט</span></div>
+          <div><h3>דירת גג בשכונת בבלי</h3><p class="meta">תל אביב · עיצוב פנים</p><span class="link">לפרויקט</span></div>
+        </a>
+        <a class="proj" href="https://www.shimrit-design.co.il/מהפך-לדירת-קבלן-ביהוד">
+          <div class="shot"><span class="ph">תמונה מהפרויקט</span></div>
+          <div><h3>מהפך לדירת קבלן</h3><p class="meta">יהוד · שינויי דיירים ועיצוב</p><span class="link">לפרויקט</span></div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="wrap">
-      <div class="head">
-        <div><p class="sq">שירותים</p><h2>שירותי עיצוב פנים: ליווי מלא או ייעוץ ממוקד</h2></div>
-      </div>
-      <ul class="services">
-        <li><a href="https://www.shimrit-design.co.il/עיצוב-סינרגי"><h3>עיצוב סינרגי</h3><p>מפה אישית ומפת בית, ותכנון שמאזן את היסודות לכל בני הבית.</p></a></li>
-        <li><a href="https://www.shimrit-design.co.il/עיצוב-פנים-בית-פרטי"><h3>עיצוב פנים לבית פרטי</h3><p>תכנון מלא מהעמדת החללים ועד בחירת כל חומר.</p></a></li>
-        <li><a href="https://www.shimrit-design.co.il/עיצוב-פנים-דירת-קבלן"><h3>עיצוב דירת קבלן ושינויי דיירים</h3><p>מתכננים את השינויים לפני שהקבלן בונה, והופכים דירה סטנדרטית לבית מותאם.</p></a></li>
-        <li><a href="https://www.shimrit-design.co.il/עיצוב-סלון-מודרני-יוקרתי"><h3>עיצוב סלון מודרני</h3><p>סלון יוקרתי ומודרני שמחבר בין נוחות, אור וחומרים.</p></a></li>
-        <li><a href="https://www.shimrit-design.co.il/תכנון-ושדרוג-מטבחים"><h3>תכנון מטבחים וחדרי רחצה</h3><p>החללים הטכניים של הבית, מתוכננים עד הסנטימטר.</p></a></li>
-        <li><a href="https://www.shimrit-design.co.il/הום-סטיילינג"><h3>הום סטיילינג</h3><p>הלבשת הבית בטקסטיל, אקססוריז ותאורה, בלי שיפוץ.</p></a></li>
-        <li><a href="https://www.shimrit-design.co.il/פנג-שואי-חדר-שינה"><h3>פנג שואי לחדר השינה</h3><p>מיקום המיטה, כיוון הראש והחומרים, לשינה טובה יותר.</p></a></li>
-        <li><a href="https://www.shimrit-design.co.il/עיצוב-משרדים-וחללי-מסחר"><h3>עיצוב משרדים וחללי מסחר</h3><p>חללי עבודה שתומכים בצוות, בלקוחות ובעסק.</p></a></li>
-        <li><a href="https://www.shimrit-design.co.il/פגישת-יעוץ-בזום"><h3>ייעוץ ממוקד ובזום</h3><p>פגישה אחת להחלטה ספציפית, גם מרחוק.</p></a></li>
+  <!-- 5. SYNERGY -->
+  <section id="synergy" class="syn">
+    <div class="narrow">
+      <p class="mark">מה מייחד אותי</p>
+      <h2>עיצוב סינרגי: <em>הבית כמערכת חיה</em></h2>
+      <p class="lede">עיצוב פנים רגיל שואל איך החלל ייראה. עיצוב סינרגי שואל איך הוא ישפיע על מי שחי בו.</p>
+      <ul class="pillars">
+        <li><h3>מותאם לכם אישית</h3><p>מפה אישית לכל בני הבית, שמראה אילו יסודות לחזק ואילו לאזן.</p></li>
+        <li><h3>פנג שואי מעשי</h3><p>עקרונות שמתורגמים לחומרים, צבעים וצורות, בלי לוותר על אסתטיקה.</p></li>
+        <li><h3>בית שמרגיש נכון</h3><p>חלל שמרגיע, תומך בשגרה ומחזק את המשפחה, יום אחרי יום.</p></li>
       </ul>
+      <a class="link" href="https://www.shimrit-design.co.il/עיצוב-סינרגי">איך זה עובד</a>
     </div>
   </section>
 
-  <!-- JOURNAL -->
-  <section id="journal" class="tint">
+  <!-- 6. TESTIMONIALS -->
+  <section class="tint" aria-label="לקוחות ממליצים">
+    <div class="narrow quotes">
+      <p class="mark">לקוחות ממליצים</p>
+      <div class="quote on"><blockquote>[ציטוט אמיתי מלקוח, מעמוד "לקוחות ממליצים"]</blockquote><cite>שם הלקוח · עיר · סוג הפרויקט</cite></div>
+      <div class="quote"><blockquote>[ציטוט שני]</blockquote><cite>שם הלקוח · עיר · סוג הפרויקט</cite></div>
+      <div class="quote"><blockquote>[ציטוט שלישי]</blockquote><cite>שם הלקוח · עיר · סוג הפרויקט</cite></div>
+      <div class="dots" role="tablist" aria-label="בחירת המלצה">
+        <button type="button" aria-label="המלצה 1" aria-current="true"></button>
+        <button type="button" aria-label="המלצה 2" aria-current="false"></button>
+        <button type="button" aria-label="המלצה 3" aria-current="false"></button>
+      </div>
+      <span class="note-ph">ממלאים ציטוטים אמיתיים מהאתר</span>
+      <p style="margin-top:24px"><a class="link" href="https://www.shimrit-design.co.il/לקוחות-ממליצים">לכל ההמלצות</a></p>
+    </div>
+  </section>
+
+  <!-- 7. PATHS -->
+  <section id="paths">
     <div class="wrap">
-      <div class="head">
-        <div><p class="sq">מאמרים</p><h2>מדריכים לפני שמתחילים לעצב</h2></div>
-        <a class="more" href="https://www.shimrit-design.co.il/מאמרים">לכל המאמרים</a>
+      <div class="sec-head"><div><p class="mark">שירותים</p><h2>מה אתם מתכננים?</h2></div></div>
+      <div class="paths">
+        <a class="path" href="https://www.shimrit-design.co.il/עיצוב-פנים-דירת-קבלן"><span class="n">01</span><h3>עיצוב דירת קבלן</h3><p>מתכננים את שינויי הדיירים לפני שהקבלן בונה.</p><span class="go">לפרטים ←</span></a>
+        <a class="path" href="https://www.shimrit-design.co.il/עיצוב-פנים-בית-פרטי"><span class="n">02</span><h3>בית פרטי</h3><p>תכנון מלא מהעמדת החללים ועד הפרט האחרון.</p><span class="go">לפרטים ←</span></a>
+        <a class="path" href="https://www.shimrit-design.co.il/עיצוב-סלון-מודרני-יוקרתי"><span class="n">03</span><h3>שיפוץ ועיצוב דירה</h3><p>מטבח, סלון וחדרי רחצה, בעיצוב מודרני ויוקרתי.</p><span class="go">לפרטים ←</span></a>
+        <a class="path" href="https://www.shimrit-design.co.il/פגישת-יעוץ-בזום"><span class="n">04</span><h3>ייעוץ ממוקד</h3><p>פגישה אחת להחלטה ספציפית, גם בזום.</p><span class="go">לפרטים ←</span></a>
       </div>
-      <div class="journal">
-        <a class="post" href="https://www.shimrit-design.co.il/interior-design-pricing-guide"><span class="cat">מחירים</span><h3>כמה עולה מעצבת פנים?</h3><p>המדריך למחירי עיצוב פנים: ממה מורכב המחיר ואיך בוחרים חבילה.</p></a>
-        <a class="post" href="https://www.shimrit-design.co.il/contractor-apartment-design-guide"><span class="cat">דירות קבלן</span><h3>המדריך לעיצוב דירת קבלן</h3><p>מה לבדוק ולתכנן לפני שמגישים לקבלן את השינויים.</p></a>
-        <a class="post" href="https://www.shimrit-design.co.il/איך-עיצוב-סינרגי-משפיע-על-האווירה-בבית"><span class="cat">עיצוב סינרגי</span><h3>איך עיצוב סינרגי משפיע על האווירה בבית</h3><p>למה חלל אחד מרגיע, וחלל אחר, יפה ככל שיהיה, לא.</p></a>
-      </div>
-      <ul class="more-guides">
-        <li><a href="https://www.shimrit-design.co.il/תכנון-תאורה-לבית-המדריך-המלא">תכנון תאורה לבית</a></li>
-        <li><a href="https://www.shimrit-design.co.il/המדריך-המלא-למטבח-מושלם">המדריך למטבח מושלם</a></li>
-        <li><a href="https://www.shimrit-design.co.il/renovation-interior-design-budget-planning">תכנון תקציב לשיפוץ</a></li>
-        <li><a href="https://www.shimrit-design.co.il/סגנונות-עיצוב-פנים">סגנונות עיצוב פנים</a></li>
-        <li><a href="https://www.shimrit-design.co.il/המדריך-המלא-למקסום-שטחי-הדירה">מקסום שטחי הדירה</a></li>
-        <li><a href="https://www.shimrit-design.co.il/העלאת-ערך-הדירה-בעזרת-עיצוב-פנים">העלאת ערך הדירה</a></li>
-      </ul>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div class="wrap contact-grid">
+  <!-- 8. PROCESS -->
+  <section class="tint">
+    <div class="wrap">
+      <div class="sec-head"><div><p class="mark">התהליך</p><h2>מהפגישה הראשונה ועד המפתח</h2></div></div>
+      <ol class="steps">
+        <li><h3>היכרות</h3><p>צרכים, סגנון, תקציב ואורח החיים שלכם.</p></li>
+        <li><h3>תכנון</h3><p>תוכנית העמדה, מפה אישית ותוכניות עבודה מפורטות.</p></li>
+        <li><h3>חומרים ורכש</h3><p>בחירת חומרים, ריהוט ותאורה, וימי רכישות משותפים.</p></li>
+        <li><h3>ליווי עד המסירה</h3><p>פיקוח בשטח מול בעלי המקצוע ועד הסטיילינג.</p></li>
+      </ol>
+      <div class="after"><p><strong>מה קורה אחרי שפונים?</strong> אחזור אליכם לשיחה קצרה ונקבע פגישת היכרות.</p><a class="btn" href="#contact">לתיאום פגישה</a></div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head" style="justify-content:center;text-align:center"><div><p class="mark">שאלות נפוצות</p><h2>לפני שנפגשים</h2></div></div>
+      <div class="faq">
+        <details open><summary>באילו אזורים את עובדת?</summary><p>הסטודיו נמצא במודיעין, ואני מתכננת ומלווה פרויקטים במודיעין ובכל אזור המרכז: תל אביב, ראשון לציון, פתח תקווה, רחובות, יהוד ומבשרת ציון. ייעוץ ממוקד אפשר לקיים גם בזום.</p></details>
+        <details><summary>כמה עולה מעצבת פנים?</summary><p>המחיר תלוי בהיקף הפרויקט ובסוג הליווי: ייעוץ ממוקד, תכנון בלבד או ליווי מלא עד המסירה. <a href="https://www.shimrit-design.co.il/interior-design-pricing-guide">במדריך המחירים</a> מפורט ממה מורכב המחיר.</p></details>
+        <details><summary>מה זה עיצוב סינרגי?</summary><p>גישה הוליסטית שמשלבת תכנון פונקציונלי, אסתטיקה ועקרונות פנג שואי. מעבר לצרכים ולסגנון, אני בונה מפה אישית לבני הבית ומתרגמת אותה לחומרים, צבעים וצורות. <a href="https://www.shimrit-design.co.il/עיצוב-סינרגי">לקריאה נוספת</a>.</p></details>
+        <details><summary>כמה זמן לוקח פרויקט?</summary><p>זה תלוי בהיקף ובשלב שבו הנכס נמצא. כבר בפגישת ההיכרות נבנה יחד לוח זמנים מותאם לפרויקט שלכם.</p></details>
+      </div>
+      <p style="text-align:center;margin:30px auto 0"><a class="link" href="https://www.shimrit-design.co.il/שאלות-ותשובות">לכל השאלות והתשובות</a></p>
+    </div>
+  </section>
+
+  <!-- 10. GUIDES -->
+  <section id="guides" class="tint">
+    <div class="wrap">
+      <div class="sec-head"><div><p class="mark">מדריכים</p><h2>לקרוא לפני שמתחילים</h2></div><a class="link" href="https://www.shimrit-design.co.il/מאמרים">לכל המאמרים</a></div>
+      <div class="guides">
+        <a class="guide" href="https://www.shimrit-design.co.il/interior-design-pricing-guide"><span class="cat">מחירים</span><h3>כמה עולה מעצבת פנים?</h3><p>ממה מורכב המחיר ואיך בוחרים את סוג הליווי.</p></a>
+        <a class="guide" href="https://www.shimrit-design.co.il/contractor-apartment-design-guide"><span class="cat">דירות קבלן</span><h3>המדריך לעיצוב דירת קבלן</h3><p>מה לבדוק ולתכנן לפני שמגישים את השינויים.</p></a>
+        <a class="guide" href="https://www.shimrit-design.co.il/איך-עיצוב-סינרגי-משפיע-על-האווירה-בבית"><span class="cat">עיצוב סינרגי</span><h3>איך עיצוב סינרגי משפיע על האווירה בבית</h3><p>למה חלל אחד מרגיע, וחלל אחר לא.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. CLOSE -->
+  <section id="contact" class="close">
+    <div class="wrap close-grid">
       <div>
-        <p class="sq">צרו קשר</p>
-        <h2>נתחיל מהמפה שלכם</h2>
-        <p class="sub" style="margin-top:14px"><a class="more" href="https://www.shimrit-design.co.il/פגישת-יעוץ-בזום">או קבעו פגישת ייעוץ בזום</a></p>
-        <p class="sub">ספרו לי בקצרה על הבית ועל הפרויקט, ואחזור אליכם לתיאום פגישת היכרות.</p>
+        <p class="mark">צרו קשר</p>
+        <h2>בואו נתחיל לתכנן את הבית שלכם</h2>
+        <p class="sub">השאירו פרטים ואחזור אליכם לתיאום פגישת היכרות.</p>
         <div class="channels">
           <div><span>סטודיו · </span>מודיעין</div>
           <div><span>טלפון ווטסאפ · </span>[מספר הסטודיו]</div>
-          <div><span>מייל · </span>[כתובת המייל של הסטודיו]</div>
+          <div><span>מייל · </span>[כתובת המייל]</div>
         </div>
       </div>
       <form id="lead" novalidate>
         <div class="field"><label for="f-name">שם מלא</label><input id="f-name" name="name" autocomplete="name" required></div>
         <div class="field"><label for="f-phone">טלפון</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
         <div class="field">
-          <label for="f-type">סוג הפרויקט</label>
+          <label for="f-type">מה אתם מתכננים?</label>
           <select id="f-type" name="type">
-            <option>בית פרטי</option>
             <option>דירת קבלן</option>
+            <option>בית פרטי</option>
             <option>שיפוץ דירה</option>
             <option>משרד או חלל מסחרי</option>
             <option>ייעוץ ממוקד</option>
           </select>
         </div>
-        <label class="check" for="f-syn"><input id="f-syn" type="checkbox" name="synergy" checked> אני רוצה לשמוע גם על המפה האישית והעיצוב הסינרגי</label>
-        <button class="btn" type="submit">שליחה</button>
+        <button class="btn gold" type="submit">שליחה</button>
         <p class="note" id="f-note" role="status"></p>
       </form>
     </div>
@@ -524,20 +487,38 @@ footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 15px; co
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <span>© שמרית אוחיון · תכנון ועיצוב פנים · מודיעין</span>
-    <ul>
-      <li><a href="https://www.shimrit-design.co.il/שמרית-אוחיון">אודות</a></li>
-      <li><a href="https://www.shimrit-design.co.il/השירותים-שלנו">שירותים</a></li>
-      <li><a href="https://www.shimrit-design.co.il/לקוחות-ממליצים">לקוחות ממליצים</a></li>
-      <li><a href="https://www.shimrit-design.co.il/מאמרים">מאמרים</a></li>
-      <li><a href="https://www.shimrit-design.co.il/שאלות-ותשובות">שאלות ותשובות</a></li>
-      <li><a href="https://www.shimrit-design.co.il/צרו-קשר">צרו קשר</a></li>
-      <li><a href="https://www.shimrit-design.co.il/מהתקשורת">מהתקשורת</a></li>
-      <li><a href="https://www.shimrit-design.co.il/הצהרת-נגישות">הצהרת נגישות</a></li>
-    </ul>
+  <div class="wrap">
+    <div class="cols">
+      <div class="foot-word"><b>שמרית אוחיון</b><span>תכנון ועיצוב פנים סינרגי · מודיעין</span></div>
+      <div><h4>ניווט</h4><ul>
+        <li><a href="https://www.shimrit-design.co.il/שמרית-אוחיון">אודות</a></li>
+        <li><a href="https://www.shimrit-design.co.il/השירותים-שלנו">שירותים</a></li>
+        <li><a href="https://www.shimrit-design.co.il/לקוחות-ממליצים">לקוחות ממליצים</a></li>
+        <li><a href="https://www.shimrit-design.co.il/מהתקשורת">מהתקשורת</a></li>
+        <li><a href="https://www.shimrit-design.co.il/מאמרים">מאמרים</a></li>
+        <li><a href="https://www.shimrit-design.co.il/צרו-קשר">צרו קשר</a></li>
+      </ul></div>
+      <div><h4>שירותים</h4><ul>
+        <li><a href="https://www.shimrit-design.co.il/עיצוב-סינרגי">עיצוב סינרגי</a></li>
+        <li><a href="https://www.shimrit-design.co.il/עיצוב-פנים-דירת-קבלן">עיצוב דירת קבלן</a></li>
+        <li><a href="https://www.shimrit-design.co.il/עיצוב-פנים-בית-פרטי">עיצוב בית פרטי</a></li>
+        <li><a href="https://www.shimrit-design.co.il/עיצוב-משרדים-וחללי-מסחר">משרדים וחללי מסחר</a></li>
+        <li><a href="https://www.shimrit-design.co.il/הום-סטיילינג">הום סטיילינג</a></li>
+      </ul></div>
+      <div><h4>אזורי שירות</h4><ul>
+        <li><a href="https://www.shimrit-design.co.il/עיצוב-פנים-במודיעין">מעצבת פנים במודיעין</a></li>
+        <li><a href="https://www.shimrit-design.co.il/מעצבת-פנים-במרכז">מעצבת פנים במרכז</a></li>
+        <li><a href="https://www.shimrit-design.co.il/עיצוב-סינרגי-תל-אביב">עיצוב סינרגי בתל אביב</a></li>
+        <li><a href="https://www.shimrit-design.co.il/עיצוב-פנים-יוקרתי-לדירה-בראשון-לציון">עיצוב פנים בראשון לציון</a></li>
+        <li><a href="https://www.shimrit-design.co.il/דופלקס---פתח-תקווה">עיצוב פנים בפתח תקווה</a></li>
+        <li><a href="https://www.shimrit-design.co.il/עיצוב-דירת-קבלן-ברחובות-בסגנון-קלאסי-מודרני">עיצוב דירת קבלן ברחובות</a></li>
+      </ul></div>
+    </div>
+    <div class="copy"><span>© שמרית אוחיון · תכנון ועיצוב פנים</span><a href="https://www.shimrit-design.co.il/הצהרת-נגישות">הצהרת נגישות</a></div>
   </div>
 </footer>
+
+<a class="wa" href="#contact" aria-label="פנייה בוואטסאפ"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg></a>
 
 <script>
 (function () {
@@ -551,44 +532,33 @@ footer { padding: 36px 0; border-top: 1px solid var(--line); font-size: 15px; co
   intro.addEventListener("animationend", function (e) { if (e.animationName === "lift") done(); });
 })();
 
-// bagua map: hover a zone to highlight it
+// header turns solid once the photo has scrolled away
 (function () {
-  var names = ["עושר ושפע", "מוניטין", "זוגיות", "משפחה", "מרכז · בריאות", "יצירה וילדים", "ידע", "קריירה", "אנשים מועילים"];
-  var cells = document.querySelectorAll(".cell");
-  var zone = document.getElementById("zone");
-  cells.forEach(function (c) {
-    c.addEventListener("mouseenter", function () {
-      cells.forEach(function (x) { x.classList.remove("on"); });
-      c.classList.add("on");
-      zone.textContent = names[+c.dataset.i];
-    });
+  var bar = document.getElementById("top-bar");
+  function onScroll() { bar.classList.toggle("solid", window.scrollY > window.innerHeight * 0.6); }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+  var btn = document.getElementById("menu-btn"), nav = document.getElementById("nav");
+  btn.addEventListener("click", function () {
+    var open = nav.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    bar.classList.toggle("solid", open || window.scrollY > window.innerHeight * 0.6);
   });
+  nav.addEventListener("click", function (e) { if (e.target.tagName === "A") { nav.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); } });
 })();
 
-// five elements
+// testimonials
 (function () {
-  var data = {
-    wood:  { name: "עץ",   sw: ["#5E7552", "#9C7B57", "#C9B48F"], mat: "חיפויי עץ, פרטי נגרות, צמחייה", shape: "קווים אנכיים ומוארכים", when: "כשצריך צמיחה, התחדשות ותנועה קדימה" },
-    fire:  { name: "אש",   sw: ["#A8432F", "#D98A4E", "#E9C39A"], mat: "תאורה חמה, טקסטיל בגוונים חמים, אח", shape: "משולשים וקצוות מחודדים", when: "כשצריך חום, תשוקה ונראות" },
-    earth: { name: "אדמה", sw: ["#8A6A48", "#C2A57D", "#E3D6BF"], mat: "קרמיקה, אבן, טיח וחומרים גולמיים", shape: "מרובעים וצורות שטוחות ויציבות", when: "כשצריך יציבות, קרקוע ותחושת ביטחון" },
-    metal: { name: "מתכת", sw: ["#FFFFFF", "#B9B9B4", "#B38D52"], mat: "פליז, ניקל, פרזול ואלמנטים מתכתיים", shape: "עיגולים וקשתות", when: "כשצריך סדר, בהירות וריכוז" },
-    water: { name: "מים",  sw: ["#1F2A33", "#3E5566", "#141414"], mat: "משטחים מבריקים, זכוכית, מראות, אלמנטים כהים", shape: "קווים גליים וזורמים", when: "כשצריך רוגע, זרימה ושפע" }
-  };
-  var els = document.querySelectorAll(".el");
-  function pick(g) {
-    var d = data[g.dataset.el];
-    els.forEach(function (x) { x.classList.remove("on"); x.setAttribute("aria-pressed", "false"); });
-    g.classList.add("on"); g.setAttribute("aria-pressed", "true");
-    document.getElementById("el-name").textContent = d.name;
-    document.getElementById("el-mat").textContent = d.mat;
-    document.getElementById("el-shape").textContent = d.shape;
-    document.getElementById("el-when").textContent = d.when;
-    document.getElementById("el-sw").innerHTML = d.sw.map(function (c) { return '<i style="background:' + c + '"></i>'; }).join("");
+  var quotes = document.querySelectorAll(".quote"), dots = document.querySelectorAll(".dots button"), i = 0, timer;
+  function show(n) {
+    i = n;
+    quotes.forEach(function (q, k) { q.classList.toggle("on", k === n); });
+    dots.forEach(function (d, k) { d.setAttribute("aria-current", k === n ? "true" : "false"); });
   }
-  els.forEach(function (g) {
-    g.addEventListener("click", function () { pick(g); });
-    g.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(g); } });
-  });
+  dots.forEach(function (d, k) { d.addEventListener("click", function () { clearInterval(timer); show(k); }); });
+  if (!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) {
+    timer = setInterval(function () { show((i + 1) % quotes.length); }, 6000);
+  }
 })();
 
 document.getElementById("lead").addEventListener("submit", function (e) {
