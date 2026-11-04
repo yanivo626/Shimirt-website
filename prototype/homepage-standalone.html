@@ -479,6 +479,7 @@ footer { padding: 64px 0 28px; background: var(--white); font-size: 16px; }
             <option>ייעוץ ממוקד</option>
           </select>
         </div>
+        <input id="f-hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
         <button class="btn gold" type="submit">שליחה</button>
         <p class="note" id="f-note" role="status"></p>
       </form>
@@ -561,14 +562,35 @@ footer { padding: 64px 0 28px; background: var(--white); font-size: 16px; }
   }
 })();
 
-document.getElementById("lead").addEventListener("submit", function (e) {
-  e.preventDefault();
-  var name = document.getElementById("f-name").value.trim();
-  var phone = document.getElementById("f-phone").value.trim();
+// lead form – posts JSON to LEAD_ENDPOINT (e.g. a Make webhook that emails the studio and adds a monday lead)
+(function () {
+  var LEAD_ENDPOINT = ""; // paste the webhook URL here
+  var form = document.getElementById("lead");
   var note = document.getElementById("f-note");
-  if (!name || !phone) { note.textContent = "צריך למלא שם וטלפון."; return; }
-  note.textContent = "זו גרסת תצוגה: הטופס יחובר לשליחת פניות באתר החי, ולא נשלח כרגע.";
-});
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = form.querySelector("#f-name").value.trim();
+    var phone = form.querySelector("#f-phone").value.trim();
+    var type = form.querySelector("#f-type").value;
+    if (form.querySelector("#f-hp").value) return; // spam bot
+    if (!name || !phone) { note.textContent = "צריך למלא שם וטלפון."; return; }
+    if (!/^[0-9+\-\s()]{9,}$/.test(phone)) { note.textContent = "מספר הטלפון לא נראה תקין. בדקו ונסו שוב."; return; }
+    if (!LEAD_ENDPOINT) { note.textContent = "הטופס עוד לא מחובר לשליחה. בינתיים אפשר לפנות בטלפון או בוואטסאפ."; return; }
+    var btn = form.querySelector("button");
+    btn.disabled = true; note.textContent = "שולח...";
+    fetch(LEAD_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: name, phone: phone, project: type, page: location.href, sent: new Date().toISOString() })
+    }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      form.reset();
+      note.textContent = "תודה! קיבלתי את הפרטים ואחזור אליכם בהקדם.";
+    }).catch(function () {
+      note.textContent = "השליחה לא הצליחה. נסו שוב, או פנו אליי בטלפון או בוואטסאפ.";
+    }).then(function () { btn.disabled = false; });
+  });
+})();
 </script>
 </body>
 </html>

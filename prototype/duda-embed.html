@@ -243,7 +243,7 @@
 #so-home p, #so-home ul, #so-home ol, #so-home blockquote { margin-top: 0; }
 #so-home a { text-decoration-skip-ink: auto; }
 #so-home .narrow, #so-home .hero { text-align: center; }
-#so-home .close-ctas { display: flex; flex-wrap: wrap; gap: 14px; align-self: center; }
+#so-home input, #so-home select, #so-home button { box-shadow: none; outline-offset: 2px; }
 
 </style>
 <div id="so-home" dir="rtl" lang="he">
@@ -409,10 +409,23 @@
           <div><span>מייל · </span>[כתובת המייל]</div>
         </div>
       </div>
-      <div class="close-ctas">
-        <a class="btn gold" href="https://www.shimrit-design.co.il/צרו-קשר">לתיאום פגישת היכרות</a>
-        <a class="btn ghost-light" href="https://www.shimrit-design.co.il/צרו-קשר">[כפתור וואטסאפ – יחובר למספר הסטודיו]</a>
-      </div>
+      <form id="lead" novalidate>
+        <div class="field"><label for="f-name">שם מלא</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-phone">טלפון</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required></div>
+        <div class="field">
+          <label for="f-type">מה אתם מתכננים?</label>
+          <select id="f-type" name="type">
+            <option>דירת קבלן</option>
+            <option>בית פרטי</option>
+            <option>שיפוץ דירה</option>
+            <option>משרד או חלל מסחרי</option>
+            <option>ייעוץ ממוקד</option>
+          </select>
+        </div>
+        <input id="f-hp" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+        <button class="btn gold" type="submit">שליחה</button>
+        <p class="note" id="f-note" role="status"></p>
+      </form>
     </div>
   </section>
 
@@ -473,6 +486,36 @@
   if (!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) {
     timer = setInterval(function () { show((i + 1) % quotes.length); }, 6000);
   }
+})();
+
+// lead form – posts JSON to LEAD_ENDPOINT (e.g. a Make webhook that emails the studio and adds a monday lead)
+(function () {
+  var LEAD_ENDPOINT = ""; // paste the webhook URL here
+  var form = root.querySelector("#lead");
+  var note = root.querySelector("#f-note");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = form.querySelector("#f-name").value.trim();
+    var phone = form.querySelector("#f-phone").value.trim();
+    var type = form.querySelector("#f-type").value;
+    if (form.querySelector("#f-hp").value) return; // spam bot
+    if (!name || !phone) { note.textContent = "צריך למלא שם וטלפון."; return; }
+    if (!/^[0-9+\-\s()]{9,}$/.test(phone)) { note.textContent = "מספר הטלפון לא נראה תקין. בדקו ונסו שוב."; return; }
+    if (!LEAD_ENDPOINT) { note.textContent = "הטופס עוד לא מחובר לשליחה. בינתיים אפשר לפנות בטלפון או בוואטסאפ."; return; }
+    var btn = form.querySelector("button");
+    btn.disabled = true; note.textContent = "שולח...";
+    fetch(LEAD_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: name, phone: phone, project: type, page: location.href, sent: new Date().toISOString() })
+    }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      form.reset();
+      note.textContent = "תודה! קיבלתי את הפרטים ואחזור אליכם בהקדם.";
+    }).catch(function () {
+      note.textContent = "השליחה לא הצליחה. נסו שוב, או פנו אליי בטלפון או בוואטסאפ.";
+    }).then(function () { btn.disabled = false; });
+  });
 })();
 })();
 </script>

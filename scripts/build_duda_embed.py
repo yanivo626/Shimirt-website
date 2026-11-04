@@ -10,8 +10,7 @@ What changes for Duda:
 - no <html>/<head>, no intro screen, header, footer or floating WhatsApp (Duda has its own)
 - every CSS rule is scoped under #so-home so it cannot clash with the Duda theme
 - only the FAQ structured data is kept (Duda's own SEO settings cover the rest)
-- the contact form becomes buttons to the existing contact page / WhatsApp,
-  because a form inside the widget has nowhere to send to
+- the lead form stays; it posts to LEAD_ENDPOINT (set it in the full page's script)
 - the hero photo is embedded, so the paste works without uploading anything
 """
 import base64
@@ -91,17 +90,10 @@ def main():
 {SCOPE} p, {SCOPE} ul, {SCOPE} ol, {SCOPE} blockquote {{ margin-top: 0; }}
 {SCOPE} a {{ text-decoration-skip-ink: auto; }}
 {SCOPE} .narrow, {SCOPE} .hero {{ text-align: center; }}
-{SCOPE} .close-ctas {{ display: flex; flex-wrap: wrap; gap: 14px; align-self: center; }}
+{SCOPE} input, {SCOPE} select, {SCOPE} button {{ box-shadow: none; outline-offset: 2px; }}
 """
 
     main_html = between(page, '<main id="top">', "</main>")
-    # contact form -> buttons
-    form = main_html[main_html.index('<form id="lead"'):main_html.index("</form>") + len("</form>")]
-    main_html = main_html.replace(form, f"""<div class="close-ctas">
-        <a class="btn gold" href="{BASE}צרו-קשר">לתיאום פגישת היכרות</a>
-        <a class="btn ghost-light" href="{BASE}צרו-קשר">[כפתור וואטסאפ – יחובר למספר הסטודיו]</a>
-      </div>""")
-
     # embed the hero photo
     img = ROOT / "prototype/assets/kitchen-suzy-levinson.jpg"
     data = "data:image/jpeg;base64," + base64.b64encode(img.read_bytes()).decode()
@@ -112,11 +104,12 @@ def main():
     faq = next(n for n in ld["@graph"] if n["@type"] == "FAQPage")
     faq = {"@context": "https://schema.org", **faq}
 
-    # only the testimonial rotation script is needed
+    # testimonials + lead form; the intro/header scripts are not needed
     script = between(page, "<script>\n", "</script>")
-    testimonials = script[script.index("// testimonials"):script.index("document.getElementById(\"lead\")")]
-    testimonials = testimonials.replace('document.querySelectorAll(".quote")', 'root.querySelectorAll(".quote")') \
-                               .replace('document.querySelectorAll(".dots button")', 'root.querySelectorAll(".dots button")')
+    widget_js = script[script.index("// testimonials"):]
+    widget_js = widget_js.replace('document.querySelectorAll(', 'root.querySelectorAll(') \
+                         .replace('document.getElementById("lead")', 'root.querySelector("#lead")') \
+                         .replace('document.getElementById("f-note")', 'root.querySelector("#f-note")')
 
     out = f"""<!-- שמרית אוחיון – דף הבית, גרסה להדבקה ב-Duda (רכיב Custom HTML).
      נוצר אוטומטית מ-prototype/index.html על ידי scripts/build_duda_embed.py – לא לערוך ידנית. -->
@@ -136,7 +129,7 @@ def main():
 (function () {{
   var root = document.getElementById("so-home");
   if (!root) return;
-  {testimonials.strip()}
+  {widget_js.strip()}
 }})();
 </script>
 """
